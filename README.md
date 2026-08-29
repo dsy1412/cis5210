@@ -41,7 +41,13 @@ Add topics only after real course material is available.
 
 | Topic | Explain | Math | Code | Transfer |
 | --- | :---: | :---: | :---: | :---: |
-| Rational agents | — | — | — | — |
+| AI philosophy and definitions | · | — | — | · |
+| Rational agents | · | · | — | · |
+| Task environments and PEAS | · | — | — | · |
+| Python homework foundations | · | — | · | · |
+| Search data structures | · | — | · | · |
+| Agent types | · | — | — | · |
+| AI ethics basics | · | — | — | · |
 | Uninformed search | — | — | — | — |
 | Informed search | — | — | — | — |
 | Adversarial search and games | — | — | — | — |
@@ -50,9 +56,8 @@ Add topics only after real course material is available.
 
 ## Notes
 
-No lecture notes yet.
-
-Use `notes/01-topic-name.md`.
+- [01 · AI Philosophy, Rational Agents, and Search](notes/01-ai-philosophy-rational-agents-and-search.md)
+- [HW01 · Python, Agents, and Search Review](notes/hw01-python-agents-and-search-review.md)
 
 ## Labs
 
