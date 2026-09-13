@@ -48,7 +48,7 @@ Add topics only after real course material is available.
 | Search data structures | · | — | · | · |
 | Agent types | · | — | — | · |
 | AI ethics basics | · | — | — | · |
-| Uninformed search | — | — | — | — |
+| Uninformed search | · | · | — | · |
 | Informed search | — | — | — | — |
 | Adversarial search and games | — | — | — | — |
 | Constraint satisfaction problems | — | — | — | — |
@@ -57,7 +57,11 @@ Add topics only after real course material is available.
 ## Notes
 
 - [01 · AI Philosophy, Rational Agents, and Search](notes/01-ai-philosophy-rational-agents-and-search.md)
+- [02 · Search Problems](notes/02-search-problems.md)
+- [Week 02 Quiz · Uninformed Search](notes/week02-quiz-uninformed-search.md)
 - [HW01 · Python, Agents, and Search Review](notes/hw01-python-agents-and-search-review.md)
+- [HW01 · Python Skills](notes/hw01-python-skills.md)
+- [HW02 · Uninformed Search](notes/hw02-uninformed-search.md)
 
 ## Labs
 

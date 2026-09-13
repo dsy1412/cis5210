@@ -2,7 +2,7 @@
 
 > Week 01 · Module 01
 
-Source: user's pasted summary of Module 1 material, including AI in Philosophy, AI in SciFi, Rational Agents, Task Environments, and the transition into Search.
+Source: user's pasted summary of Module 1 material, plus transcript excerpts from AI in Philosophy, AI in Science, and Rational Agents.
 
 This note keeps the lecture's main logic. It does not try to solve the philosophical debate about whether machines really think; it records how the course moves from that debate into rational-agent design.
 
@@ -42,11 +42,16 @@ $$
 ### Questions
 
 1. Turing Test 到底测试的是 thinking，还是 acting humanly？
+![[Pasted image 20260903145815.png]]
 2. Chinese Room 为什么挑战“会输出语言 = 真正理解”？
+![[Pasted image 20260903150237.png]]
 3. 为什么 rationality 不等于 omniscience？
+![[Pasted image 20260903150351.png]]
 4. PEAS 为什么是设计 agent 前必须先写清楚的东西？
+![[Pasted image 20260903150559.png]]
+![[Pasted image 20260903150635.png]]
 5. 为什么 search 需要先假设环境是 static, fully observable, deterministic, discrete？
-
+![[Pasted image 20260903151331.png]]
 ---
 
 ## 02 · Notes
@@ -99,6 +104,29 @@ Descartes 认为机器和人的关键区别之一是：机器不能真正、灵�
 
 这和后来的 Turing Test 很接近。
 
+Transcript addition（录音补充）:
+
+Descartes 的怀疑方法是先丢掉一切不能绝对确定的 belief（信念），再问什么东西不可怀疑。Perception（感知）可能是梦，也可能是 illusion（幻觉），但“我正在思考”这件事本身说明“我存在”。
+
+这个思路带出 AI 的早期问题：
+
+```text
+human-looking body
+-> could be mechanical replica
+-> how do I know there is a mind inside?
+```
+
+17、18 世纪的 automatons（自动机械人偶）让这个问题更具体。Transcript 提到两个例子：
+
+- The Turk：看起来会下棋的 automaton，实际是有人藏在里面操控，是 hoax（骗局）。
+- Franklin Institute 的 writing / drawing automaton：真正的机械装置，可以写诗、画图。
+
+Descartes 的区分标准大致是：
+
+> automaton 只能按预设方式反应，而真正的人能在开放式场景中灵活使用语言。
+
+This is why language becomes such an important test case for AI.
+
 #### Turing Test: Operationalizing the Question
 
 Turing 认为 “Can machines think?” 太难定义，所以把问题 operationalize（操作化）：
@@ -139,6 +167,24 @@ $$
 \text{Thinking Rationally or Acting Rationally}
 $$
 
+Transcript addition（录音补充）:
+
+Turing 的背景也很重要。他是 computer science（计算机科学）的奠基人物之一，二战期间在 Bletchley Park 参与破解 German Enigma code（德国恩尼格玛密码）。早期 digital computers（数字计算机）的成功应用之一就是 code breaking（密码破译）。
+
+Turing Test 来自 imitation game（模仿游戏）的思路：
+
+```text
+people hidden in different rooms
+-> communicate only by typed responses
+-> judge guesses who is who
+```
+
+Turing 把这个游戏改成：
+
+> 如果机器能通过文字交流让 judge 误以为它是人，那么这可以作为 intelligence 的操作性标准。
+
+这不是证明 machine has a mind（机器有心灵），而是把一个难定义的问题变成可测试的行为问题。
+
 #### Searle's Chinese Room
 
 Searle 的 Chinese Room（中文房间）挑战 Turing Test。
@@ -176,6 +222,28 @@ Searle 的结论是：
 | Strong AI（强人工智能） | 机器真的拥有 understanding, mind, cognitive states |
 | Weak AI（弱人工智能） | 机器只是 simulate thought，看起来像理解 |
 
+#### ELIZA: Rule-Based Conversation
+
+Transcript 还提到 ELIZA，一个早期 AI 系统，用规则模仿 Rogerian psychotherapy（罗杰斯式心理治疗）。
+
+ELIZA 的典型模式：
+
+```text
+user says: I am feeling isolated.
+ELIZA transforms it into: Why do you say that you are feeling isolated?
+```
+
+它看起来像在对话，但核心是 deterministic transformation（确定性转换）和 keyword trigger（关键词触发）。
+
+这正好支持 Searle 的担忧：
+
+```text
+plausible conversation
+!= semantic understanding
+```
+
+ELIZA 可以 act conversationally（表现得像在对话），但它没有真正理解用户的 meaning（意义）。
+
 #### Dennett and Brain in a Vat
 
 Dennett 的 Brain in a Vat（缸中之脑）继续追问：
@@ -203,6 +271,55 @@ simulating thinking?
 然后转向更可操作的问题：
 
 > How do we build practical AI programs that work?
+
+#### AGI Returns to the Conversation
+
+Transcript addition（录音补充）:
+
+AI research 很长一段时间把 philosophical AGI questions（通用人工智能哲学问题）放到一边，转向 self-contained machine learning tasks（封闭、可评测的机器学习任务）。
+
+Typical shift:
+
+```text
+artificial general intelligence
+-> specific benchmark tasks
+-> leaderboards
+-> measurable progress
+```
+
+For example:
+
+```text
+broader goal: build intelligent systems
+proxy task: identify objects in a photograph
+```
+
+这种做法让研究更可测量，但也把“机器是否真的有 mind / sentience（心灵 / 感知能力）”的问题暂时搁置。
+
+近几年 AGI 又回到讨论里。Transcript 提到：
+
+- Google LaMDA 事件：有人担心 large language model 似乎显示出 sentience（感知能力）的迹象。
+- GPT-3：教授第一次使用时觉得 human-sounding text（像人写的文本）非常 uncanny（怪异地逼真）。
+- Microsoft Research 早期 GPT-4 paper：用 AGI prerequisite（通用智能前置能力）的角度探索 GPT-4 的能力。
+
+其中一个特别重要的概念是 theory of mind（心智理论）：
+
+> I understand that another person may have a different representation and perception of the world, and I model what they believe.
+
+中文理解：
+
+> 我不仅知道“我怎么看世界”，还知道“对方可能怎么看世界”，并能根据对方的视角推理。
+
+如果一个 AI system 在某些任务中表现出 theory-of-mind-like behavior，那么它会把课程开头的哲学问题重新带回来：
+
+```text
+simulated understanding?
+or real cognitive capacity?
+```
+
+Important boundary:
+
+> 课程仍然不把证明 AGI / consciousness 当作主要目标；它只是承认这些问题因为 modern LLMs 又变得难以完全忽略。
 
 ### SciFi: From Imagination to Narrow AI
 
@@ -249,6 +366,102 @@ Historical milestones:
 Key idea:
 
 > 很多以前被认为需要“人类智能”的任务，后来可以被清楚地形式化并由机器完成。
+
+#### Acting Humanly in SciFi
+
+SciFi 的很多 AI 例子其实都在问 acting humanly 的问题。
+
+| Work | AI Question |
+| --- | --- |
+| Star Trek: Data | Can an android act humanly without ordinary human emotion? |
+| Westworld | If artificial agents look and act human, do they deserve dignity? |
+| Battlestar Galactica | What if agents are indistinguishable sleeper agents among humans? |
+| Blade Runner | How can we test whether someone is human or replicant? |
+
+Blade Runner 的 Voight-Kampff Test 和 Turing Test 很像：
+
+```text
+behavior / reaction
+-> infer human or artificial
+```
+
+Transcript also connects this to Descartes:
+
+```text
+Descartes asks: how do I know this is not an automaton?
+Blade Runner asks: how do I know this is not a replicant?
+```
+
+#### CAPTCHA as a Modern Turing Test
+
+CAPTCHA stands for:
+
+> Completely Automated Public Turing test to tell Computers and Humans Apart.
+
+It is a practical modern version of:
+
+```text
+prove you are human
+not a robot
+```
+
+But the form is different from sci-fi. Instead of emotional interrogation, we often click traffic lights or crosswalks.
+
+Useful reversal:
+
+```text
+Turing Test: can a machine pass as human?
+CAPTCHA: can a human prove they are not a machine?
+```
+
+#### Games and Search Limits
+
+Games are central AI challenge problems because they are formal, measurable, and still difficult.
+
+Progression:
+井字棋
+```text
+tic-tac-toe
+-> chess / Deep Blue
+-> Jeopardy! / Watson
+-> Go / AlphaGo
+```
+![[Pasted image 20260903151849.png]]
+Important search idea:
+
+> Small games may allow exhaustive search, but chess and Go are too large to search completely.
+
+This prepares later topics:
+
+- adversarial search（对抗搜索）
+- minimax
+- expectimax
+- heuristic search（启发式搜索）
+
+Do not over-expand these yet. For this lecture, the point is:
+
+```text
+game playing
+-> choose best next move
+-> cannot always enumerate every future
+-> need smarter search / evaluation
+```
+
+#### Voice, Translation, Vision, Robotics
+
+SciFi also anticipated narrow AI tasks that later became real:
+
+| SciFi Example | Real Direction |
+| --- | --- |
+| Terminator vision | classification, object detection, segmentation |
+| HAL 9000 | voice interaction and natural language response |
+| C-3PO | machine translation |
+| DARPA Grand Challenge | autonomous driving |
+| DARPA Robotics Challenge | humanoid robotics |
+
+Important distinction:
+
+> SciFi often imagines one unified general intelligence; real AI often first succeeds by decomposing that dream into narrow benchmarked tasks.
 
 ### Agent
 
@@ -412,6 +625,38 @@ weather forecast says P(rain)=0.8
 
 This does not mean bringing an umbrella was irrational. The decision was rational because it used the available information.
 
+Transcript addition（录音补充）:
+
+Another example:
+
+```text
+you stop to say hello to a friend
+-> an air conditioner falls from above
+-> bad outcome
+```
+
+The bad outcome does not prove the original action was irrational, because the agent could not reasonably predict that consequence.
+
+This connects to bounded rationality（有限理性）:
+
+> Agents make decisions with limited information and limited computational ability.
+
+Herbert Simon's rational choice framing matters here because it emphasizes:
+
+```text
+not omniscient
+not unlimited computation
+still trying to choose well
+```
+
+For AI, this is not just philosophy. Computational limits are real:
+
+```text
+tic-tac-toe: can often search all outcomes
+chess / Go: cannot exhaustively search all outcomes
+real world: uncertainty + computation limits
+```
+
 ### Expected Performance
 
 The stronger definition is:
@@ -436,6 +681,24 @@ Core memory:
 $$
 \boxed{\text{Rational Agent}=\text{maximize expected performance}}
 $$
+
+Why expected value matters:
+
+```text
+maximizing actual performance
+-> would require knowing real future outcomes
+-> impossible in most environments
+
+maximizing expected performance
+-> uses available information
+-> handles uncertainty
+```
+
+Later connection:
+
+- minimax: useful when the opponent is rational and trying to maximize its own score.
+- expectimax: useful when outcomes include chance, such as dice rolls or card draws.
+- expected maximum utility: later formal decision principle.
 
 ### Task Environment and PEAS
 
@@ -514,7 +777,7 @@ Partially observable:
 
 Example: self-driving car, because sensors are limited, objects can be hidden, and other drivers' intentions are unknown.
 
-#### Deterministic vs Stochastic
+#### Deterministic确定性 vs Stochastic随机性
 
 Deterministic:
 
@@ -526,7 +789,7 @@ Stochastic:
 
 Example: roulette or real-world driving.
 
-#### Episodic vs Sequential
+#### Episodic 独立回合制vs Sequential序列自动驾驶
 
 Episodic:
 
@@ -538,7 +801,7 @@ Sequential:
 
 Example: autonomous driving.
 
-#### Static vs Dynamic
+#### Static静态 填字游戏 vs Dynamic
 
 Static:
 
@@ -558,7 +821,7 @@ Semi-dynamic:
 
 Example: chess with a clock.
 
-#### Discrete vs Continuous
+#### Discrete离散 vs Continuous
 
 Discrete:
 
@@ -572,7 +835,7 @@ Continuous:
 
 Example: self-driving car and industrial control.
 
-#### Single-Agent vs Multi-Agent
+#### Single-Agent vs Multi-Agent多智能体
 
 Single-agent:
 
@@ -768,12 +1031,16 @@ The solution is a sequence of actions that transforms the initial puzzle configu
 
 - [ ] I can explain why Turing Test is acting humanly, not proof of understanding.
 - [ ] I can explain syntax vs semantics using Chinese Room.
+- [ ] I can explain why ELIZA supports the symbol-manipulation critique.
 - [ ] I can distinguish strong AI and weak AI.
+- [ ] I can explain why AGI questions returned after modern LLMs.
+- [ ] I can define theory of mind at a recognition level.
 - [ ] I can state the four AI definitions without mixing rows and columns.
 - [ ] I can define agent, sensor, actuator, percept, and percept sequence.
 - [ ] I can explain agent function vs agent program.
 - [ ] I can explain why giant lookup tables do not scale.
 - [ ] I can define rationality as maximizing expected performance.
+- [ ] I can explain bounded rationality and limited computation.
 - [ ] I can explain why rational action may still fail.
 - [ ] I can write PEAS for a new task environment.
 - [ ] I can classify an environment along the six dimensions.
@@ -813,14 +1080,18 @@ Before implementing:
 
 ## 08 · Connections
 
-AI Philosophy  
--> Acting Humanly  
--> Turing Test  
--> Chinese Room  
--> Strong AI / Weak AI  
--> Rational Agents  
--> Performance Measure  
--> Expected Value  
--> PEAS  
--> Task Environment  
+AI Philosophy
+
+-> Acting Humanly
+-> Turing Test
+-> Chinese Room
+-> ELIZA
+-> Strong AI / Weak AI
+-> AGI / LLMs
+-> Rational Agents
+-> Bounded Rationality
+-> Performance Measure
+-> Expected Value
+-> PEAS
+-> Task Environment
 -> Search
