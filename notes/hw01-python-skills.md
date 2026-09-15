@@ -10,6 +10,59 @@ Source: CIS5210 Homework 1 (Python Skills, 105 points) and the submitted `homewo
 
 > 不 import 标准库的前提下，我能不能用内置类型把数据表示清楚，并且知道每种写法的代价和边界？
 
+## 00 · Quick Review First
+
+### Read With These Questions
+
+1. Python 为什么是 strongly typed 但 dynamically typed？
+2. 哪些对象可以当 dict key？为什么 list 不行、tuple 通常可以？
+3. slicing 会不会复制？什么时候是 shallow copy？
+4. list comprehension 的 `for` 和 `if` 顺序怎么读？
+5. generator 和 list 的区别是什么？`yield` 什么时候真正执行？
+6. 字符串为什么用 `join` 比反复 `+=` 更合适？
+7. `Polynomial` 的内部表示为什么要保持不可变或不被外部 alias 修改？
+8. `__add__`、`__mul__`、`__call__`、`__str__` 分别让对象像什么一样工作？
+9. `simplify` 应该处理哪些边界：零系数、同次项、空 polynomial、符号显示？
+10. numpy / NLTK 题目在考 library call，还是在考输入输出 shape？
+
+### One-Minute Map
+
+```text
+Python object model
+-> mutability and hashability
+-> sequences, slicing, comprehensions, generators
+-> string normalization
+-> object-oriented special methods
+-> numeric/text libraries with exact input-output behavior
+```
+
+一句话记忆：
+
+> HW1 is Python fluency for future AI code: represent data cleanly, avoid aliasing mistakes, and make objects behave predictably.
+
+### Professional Terms
+
+| Term | 中文 | Quick Meaning |
+| --- | --- | --- |
+| Strong Typing | 强类型 | incompatible operations usually raise errors |
+| Dynamic Typing | 动态类型 | variable names can bind to objects of different types over time |
+| Mutable | 可变 | object contents can change in place |
+| Immutable | 不可变 | object contents cannot change after creation |
+| Hashable | 可哈希 | can be used as a dict key / set element |
+| Aliasing | 别名引用 | two names point to the same object |
+| Slice | 切片 | subsequence operation like `xs[1:-1]` |
+| Shallow Copy | 浅拷贝 | copies container, not nested objects |
+| List Comprehension | 列表推导式 | compact map/filter list construction |
+| Generator | 生成器 | lazily produces values using `yield` |
+| Normalization | 规范化 | convert text into a consistent format |
+| Special Method | 特殊方法 | `__add__`, `__call__`, `__str__` 等 protocol hooks |
+| Polynomial | 多项式 | terms represented by coefficient and power |
+| Coefficient | 系数 | term multiplier |
+| Power / Degree | 幂 / 次数 | variable exponent |
+| Tokenization | 分词 | split text into tokens |
+| Part-of-Speech Tagging | 词性标注 | assign tags such as noun / verb / adverb |
+| PEP 8 / pycodestyle | Python 风格检查 | style rules used by the autograder |
+
 ---
 
 ## 01 · 作业约束

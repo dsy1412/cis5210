@@ -19,6 +19,57 @@ problem formulation
 
 > 一个 puzzle 要能被 search algorithm 解决，必须先把 state、actions、transition、goal test、path cost 表示清楚。
 
+## 00 · Quick Review First
+
+### Read With These Questions
+
+1. N-Queens 为什么可以用 row-by-row representation，而不是存整个棋盘？
+2. diagonal constraint 怎么用 row difference 和 column difference 判断？
+3. DFS / backtracking 在 N-Queens 中什么时候 append partial board，什么时候回退？
+4. Lights Out 的 state 为什么最好转成 hashable representation 再放进 visited set？
+5. toggle 一个 cell 时，哪些 neighbor 会变化？边界如何处理？
+6. BFS solver 里 frontier 存的是 state 还是 path？如何返回 move sequence？
+7. identical disks 和 distinct disks 的 goal test 有什么不同？
+8. disk movement 里 slide move 和 jump move 的合法条件是什么？
+9. 为什么这些 puzzle solver 用 BFS 能保证 shortest move sequence？
+10. state representation 选错会造成哪些 bug：重复 state、mutating visited、path 丢失？
+
+### One-Minute Map
+
+```text
+formulate puzzle as search
+-> choose compact state representation
+-> generate legal successors
+-> avoid repeated states
+-> BFS returns shortest path for unit-cost puzzles
+-> DFS/backtracking enumerates structured solutions
+```
+
+一句话记忆：
+
+> HW2 is where search becomes code: correctness mostly depends on clean states and exact successor generation.
+
+### Professional Terms
+
+| Term | 中文 | Quick Meaning |
+| --- | --- | --- |
+| N-Queens | N 皇后 | place queens so none attack each other |
+| Backtracking | 回溯 | DFS that undoes choices after exploring them |
+| Partial Board | 部分棋盘 | only first few rows / placements assigned |
+| Diagonal Constraint | 对角线约束 | queens conflict when row and column differences match |
+| Lights Out | 灭灯游戏 | toggling cells to make all lights off |
+| Toggle | 翻转 | change `True` to `False` or reverse |
+| Successor Generation | 后继生成 | list all legal next states and moves |
+| Deep Copy | 深拷贝 | copy nested structure before mutation |
+| Hashable State | 可哈希状态 | immutable representation usable in visited set |
+| BFS Graph Search | BFS 图搜索 | FIFO frontier plus visited set |
+| Identical Disks | 相同圆盘 | disks have no individual labels |
+| Distinct Disks | 不同圆盘 | disks have identities and target reversed order |
+| Slide Move | 平移一步 | move disk into adjacent empty slot |
+| Jump Move | 跳跃一步 | jump over one occupied slot into empty slot |
+| Frontier | 边界队列 | states/paths waiting to be expanded |
+| Optimal Solution | 最优解 | shortest move sequence under unit step cost |
+
 ---
 
 ## 01 · 作业结构

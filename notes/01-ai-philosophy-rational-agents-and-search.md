@@ -6,6 +6,92 @@ Source: user's pasted summary of Module 1 material, plus transcript excerpts fro
 
 This note keeps the lecture's main logic. It does not try to solve the philosophical debate about whether machines really think; it records how the course moves from that debate into rational-agent design.
 
+## 00 · Quick Review First
+
+### Read With These Questions
+
+复习时先不要从细节背起，先用这组问题检查自己有没有抓住主线：
+
+1. AI 的四种定义分别是什么？这门课为什么选择 **Acting Rationally** 作为主线？
+2. Turing Test 测试的是 “thinking” 还是 “acting humanly”？它为什么不能证明机器真的理解？
+3. Chinese Room 想反驳什么？它怎样区分 syntax（符号操作）和 semantics（意义理解）？
+4. ELIZA 为什么是一个好例子：看起来会对话，为什么仍不等于真正理解？
+5. 为什么 modern LLMs / AGI 让哲学问题重新回到 AI 讨论中？
+6. 什么是 agent？sensor、actuator、percept、percept sequence 分别是什么？
+7. Agent function 和 agent program 有什么区别？为什么 table-driven agent 不可扩展？
+8. Rationality 为什么不等于 omniscience？为什么 rational action 仍然可能产生 bad outcome？
+9. Expected performance 和 actual performance 有什么区别？为什么 AI 更关心 expected performance？
+10. PEAS 如何描述 task environment？给 taxi / drone 写 PEAS 时最容易混哪几项？
+11. 六个 environment dimensions 是什么？为什么 self-driving car 是最难的一类环境？
+12. 为什么课程进入 search 前要先限制在 static, fully observable, deterministic, discrete environments？
+
+### One-Minute Map
+
+```text
+Can machines think?
+-> hard to define thinking
+-> test behavior instead: Turing Test / acting humanly
+-> challenge behavior-only view: Chinese Room / semantics
+-> course shifts to engineering: rational agents
+-> rational agent = choose action maximizing expected performance
+-> define task first with PEAS and environment dimensions
+-> simplified task environments lead naturally to search problems
+```
+
+### Professional Terms
+
+| Term | 中文 | Quick Meaning |
+| --- | --- | --- |
+| Artificial Intelligence (AI) | 人工智能 | Study of systems that reason, act, or perform tasks associated with intelligence. |
+| Thinking Humanly | 像人一样思考 | Model how humans actually think. |
+| Acting Humanly | 像人一样行动 | Behave in a way that appears human, such as passing a Turing Test. |
+| Thinking Rationally | 理性地思考 | Follow formal rules of correct reasoning. |
+| Acting Rationally | 理性地行动 | Choose actions that maximize expected performance. |
+| Consciousness | 意识 | Subjective experience; this course does not try to prove machines have it. |
+| Mind / Body Dualism | 心身二元论 | Descartes' distinction between physical body and thinking mind. |
+| Automaton | 自动机械 | A machine that behaves in a preset mechanical way. |
+| Turing Test | 图灵测试 | Behavioral test: can a machine imitate human conversation well enough? |
+| Operationalize | 操作化 | Turn a vague question into something testable. |
+| Chinese Room | 中文房间 | Searle's thought experiment against “symbol manipulation = understanding.” |
+| Syntax | 句法 / 符号规则 | Manipulating symbols according to rules. |
+| Semantics | 语义 / 意义 | Understanding what symbols mean. |
+| Strong AI | 强人工智能 | Claim that a machine could truly understand or have mental states. |
+| Weak AI | 弱人工智能 | Claim that a machine can simulate intelligent behavior without real understanding. |
+| ELIZA | 早期对话程序 | Rule-based chatbot that seemed conversational without semantic understanding. |
+| Brain in a Vat | 缸中之脑 | Thought experiment about simulated experience and reality. |
+| AGI | 通用人工智能 | AI with broad, general reasoning ability across tasks. |
+| Theory of Mind | 心智理论 | Ability to model what another person knows, believes, or perceives. |
+| Agent | 智能体 | Something that perceives an environment and acts in it. |
+| Sensor | 传感器 | Mechanism for receiving percepts from the environment. |
+| Actuator | 执行器 | Mechanism for taking actions in the environment. |
+| Percept | 感知输入 | What the agent receives at one moment. |
+| Percept Sequence | 感知序列 | Full history of percepts received so far. |
+| Agent Function | 智能体函数 | Abstract mapping from percept sequence to action. |
+| Agent Program | 智能体程序 | Concrete implementation running on hardware. |
+| Table-Driven Agent | 查表智能体 | Stores percept histories and actions explicitly; does not scale. |
+| Rationality | 理性 | Choosing the best action given available information and goals. |
+| Omniscience | 全知 | Knowing actual future outcomes; rationality does not require this. |
+| Bounded Rationality | 有限理性 | Rational choice under limited information and computation. |
+| Performance Measure | 性能指标 | Criterion used to evaluate how well the agent is doing. |
+| Expected Performance | 期望表现 | Average / probabilistic performance given uncertainty. |
+| PEAS | 任务环境描述框架 | Performance, Environment, Actuators, Sensors. |
+| Task Environment | 任务环境 | The problem setting the agent is designed to operate in. |
+| Fully Observable | 完全可观测 | Agent can detect all relevant aspects of the environment. |
+| Partially Observable | 部分可观测 | Agent lacks some relevant information. |
+| Deterministic | 确定性 | Action outcome is fixed by current state and action. |
+| Stochastic | 随机性 | Action outcome involves probabilities. |
+| Episodic | 回合独立 | Each decision is mostly independent. |
+| Sequential | 序列性 | Current actions affect future decisions. |
+| Static | 静态 | Environment does not change while agent deliberates. |
+| Dynamic | 动态 | Environment changes while agent is deciding. |
+| Discrete | 离散 | States/actions/time are countable or separate. |
+| Continuous | 连续 | States/actions/time vary smoothly. |
+| Single-Agent | 单智能体 | Only one decision-making agent matters. |
+| Multi-Agent | 多智能体 | Other agents also optimize their own goals. |
+| Reflex Agent | 反射型智能体 | Acts from current percept without planning. |
+| Problem-Solving Agent | 问题求解智能体 | Plans action sequences to reach goals. |
+| Search Problem | 搜索问题 | Find a sequence of actions from initial state to goal state. |
+
 ## 01 · Before
 
 ### Big Question
@@ -42,16 +128,11 @@ $$
 ### Questions
 
 1. Turing Test 到底测试的是 thinking，还是 acting humanly？
-![[Pasted image 20260903145815.png]]
 2. Chinese Room 为什么挑战“会输出语言 = 真正理解”？
-![[Pasted image 20260903150237.png]]
 3. 为什么 rationality 不等于 omniscience？
-![[Pasted image 20260903150351.png]]
 4. PEAS 为什么是设计 agent 前必须先写清楚的东西？
-![[Pasted image 20260903150559.png]]
-![[Pasted image 20260903150635.png]]
 5. 为什么 search 需要先假设环境是 static, fully observable, deterministic, discrete？
-![[Pasted image 20260903151331.png]]
+
 ---
 
 ## 02 · Notes

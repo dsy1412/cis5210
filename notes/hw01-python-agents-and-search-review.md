@@ -6,6 +6,61 @@ Source: user's pasted homework review notes. This note is organized by concept, 
 
 This is a practical review note. It focuses on Python details and early AI concepts that are likely to appear in homework, quizzes, or coding tasks.
 
+## 00 · Quick Review First
+
+### Read With These Questions
+
+1. class、instance、attribute、method 之间是什么关系？
+2. `==` 和 `is` 分别比较什么？aliasing 为什么会让 bug 难发现？
+3. graph search 里为什么常用 `deque`、`heapq`、`set`、predecessor map？
+4. BFS / DFS / best-first search 的 frontier 数据结构分别是什么？
+5. table-driven agent 为什么理论上简单、实践上不可扩展？
+6. reflex / model-based / goal-based / utility-based / learning agent 的区别是什么？
+7. PEAS 四个字母分别设计什么？
+8. fully observable、deterministic、episodic、static、discrete、single-agent 这些维度各自问的是什么？
+9. rationality 为什么不是 omniscience？坏结果一定说明 agent 不 rational 吗？
+10. mortgage approval AI 的 bias 和 transparency 问题，分别来自哪里？
+
+### One-Minute Map
+
+```text
+Python objects and data structures
+-> search implementation patterns
+-> agent architecture
+-> PEAS task environment
+-> rationality under uncertainty
+-> ethics of automated decisions
+```
+
+一句话记忆：
+
+> This note connects Python mechanics to AI design: data representation choices become agent behavior choices.
+
+### Professional Terms
+
+| Term | 中文 | Quick Meaning |
+| --- | --- | --- |
+| Class | 类 | blueprint for objects |
+| Instance | 实例 | concrete object created from a class |
+| Attribute | 属性 | data stored on an object |
+| Method | 方法 | function defined inside a class |
+| Object Identity | 对象身份 | whether two names refer to the same object |
+| Aliasing | 别名 | multiple references to one mutable object |
+| `deque` | 双端队列 | efficient FIFO queue for BFS |
+| `heapq` | 堆队列 | priority queue for best-first / A* |
+| Visited Set | 已访问集合 | stores states already seen |
+| Predecessor Map | 前驱映射 | reconstructs solution path |
+| Table-Driven Agent | 查表 agent | maps percept sequences directly to actions |
+| Model-Based Reflex Agent | 基于模型反射 agent | keeps internal state about the world |
+| Goal-Based Agent | 目标型 agent | chooses actions to reach goals |
+| Utility-Based Agent | 效用型 agent | compares how desirable outcomes are |
+| Learning Agent | 学习型 agent | improves behavior from experience |
+| PEAS | 性能/环境/执行器/传感器 | task-environment design framework |
+| Rationality | 理性 | maximizes expected performance given available evidence |
+| Omniscience | 全知 | knowing actual outcomes in advance |
+| Bias | 偏见 | systematic unfairness in data or decisions |
+| Transparency | 透明性 | ability to explain decision factors and process |
+
 ## 01 · Big Picture
 
 这份作业补充把两条线连在一起：

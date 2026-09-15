@@ -18,12 +18,19 @@ Notes record what I understand; review records what I do not understand.
 - Search complexity variables: distinguish branching factor $b$, shallowest goal depth $d$, and maximum depth $m$.
 - Optimal solution cost: explain what $C^*$ means and when it equals depth $d$.
 - Iterative deepening derivation: explain why repeated depth-limited search is still $O(b^d)$.
+- Informed search: distinguish Greedy best-first search from A* using $g(n)$, $h(n)$, and $f(n)$.
+- Uniform Cost Search: explain why UCS uses $g(n)$ and why the goal test happens when a node is popped.
+- Heuristic guarantees: explain admissible, consistent, and why consistent implies admissible.
 - PEAS: write Performance, Environment, Actuators, and Sensors for a new task without mixing them.
 - Bounded rationality: explain why rational agents cannot require omniscience or unlimited computation.
 
 ### Medium Priority
 
 - Uninformed vs informed search: explain what information the algorithm is allowed to use.
+- Heuristic dominance: check dominance only when one admissible heuristic is greater than or equal to another at every node.
+- Relaxed problems: explain why removing constraints gives an admissible heuristic.
+- 8-puzzle Manhattan distance: compute tile row/column distances without counting the blank.
+- A* optimality proof sketch: explain why an ancestor of the optimal goal exits the frontier before a suboptimal goal.
 - LLMs and planning: explain why a language model can answer a famous shortest-path example without reliably computing shortest paths.
 - Adversarial games: explain why an optimal move depends on assumptions about the opponent.
 - Constraint satisfaction: distinguish search over paths from search over assignments.
@@ -44,6 +51,138 @@ Record repeated confusions here after quizzes, homework, or oral explanations.
 ## Oral Exams
 
 ### Week 01
+
+Question:
+
+Why is Uniform Cost Search not the same as unit-cost search?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+Why does UCS test whether a node is a goal when it is selected for expansion?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+What is the difference between Greedy best-first search and A*?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+What do $g(n)$, $h(n)$, and $f(n)$ mean in A*?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+Why does A* wait until a goal is popped from the frontier instead of returning it when first generated?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+What is an admissible heuristic, and why is it called optimistic?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+What is a consistent heuristic, and why does consistency imply admissibility?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+Sketch why A* tree search is optimal with an admissible heuristic.
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+When does one heuristic dominate another?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+Why can a relaxed problem produce an admissible heuristic?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+Compute Manhattan distance for an 8-puzzle state and explain why the blank is ignored.
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
 
 Question:
 

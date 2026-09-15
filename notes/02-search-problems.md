@@ -6,6 +6,68 @@ Source: `03-Search-Problems.pptx.pdf`, user's pasted Canvas transcripts for Modu
 
 This note treats the attached course materials as source material only. It records the lecture logic for learning and review.
 
+## 00 · Quick Review First
+
+### Read With These Questions
+
+1. 什么情况下 reflex agent 不够，需要 problem-solving agent？
+2. A search problem 的五个核心成分是什么？
+3. state 和 node 的区别是什么？为什么同一个 state 可以出现在多个 node 里？
+4. frontier 存的是什么？explored set / visited set 存的是什么？
+5. tree search 为什么会重复走回头路？graph search 用什么避免 repeated states？
+6. BFS 为什么 complete？它的 optimality 需要什么假设？
+7. DFS 为什么省 memory？它为什么可能不 complete / not optimal？
+8. Depth-limited search 的 limit `l` 小于、等于、大于 `d` 时分别会发生什么？
+9. Iterative deepening search 为什么重复展开浅层节点，但时间复杂度仍然是 `O(b^d)`？
+10. `b`、`d`、`m` 分别控制哪类复杂度？为什么不能混在一起？
+
+### One-Minute Map
+
+```text
+rational agent needs planning
+-> formulate a search problem
+-> represent states, actions, transitions, goal test, and path cost
+-> build a search tree over nodes
+-> manage the frontier
+-> choose an expansion order: BFS / DFS / DLS / IDS
+-> evaluate by completeness, optimality, time, and space
+```
+
+一句话记忆：
+
+> Search is not "finding a fact"; it is finding an action sequence from an initial state to a goal state.
+
+### Professional Terms
+
+| Term | 中文 | Quick Meaning |
+| --- | --- | --- |
+| Search Problem | 搜索问题 | 用状态、动作、转移、目标和代价描述 planning |
+| State | 状态 | 世界在抽象层面的一个 configuration |
+| Initial State | 初始状态 | search 开始的 state |
+| Action | 动作 | 在某个 state 下可选择的 operation |
+| Transition Model | 转移模型 | `Result(s, a)`，动作之后到哪个 state |
+| Successor | 后继 | 从当前 state/action 产生的新 state |
+| State Space | 状态空间 | 所有 reachable states 的集合 |
+| Goal Test | 目标测试 | 判断当前 state 是否已经达到目标 |
+| Path | 路径 | 从 start 到某个 node 的 action sequence |
+| Path Cost | 路径代价 | 整条 path 的累计 cost |
+| Search Tree | 搜索树 | algorithm 展开的 node 结构，不等于原始 state graph |
+| Node | 节点 | 包含 state、parent、action、path cost、depth 的 search-tree record |
+| Frontier | 边界队列 | 已生成但还没有展开的 nodes |
+| Explored Set / Visited Set | 已访问集合 | graph search 用来避免重复 state |
+| Tree Search | 树搜索 | 不记 visited，可能重复展开同一 state |
+| Graph Search | 图搜索 | 记录 visited / best-known states，避免 repeated states |
+| Uninformed Search | 无信息搜索 | 不用 goal 方向信息，只按 problem definition 搜 |
+| Breadth-First Search (BFS) | 广度优先搜索 | FIFO frontier，按 depth 一层层展开 |
+| Depth-First Search (DFS) | 深度优先搜索 | LIFO frontier，先沿一条 path 走深 |
+| Depth-Limited Search (DLS) | 深度限制搜索 | DFS 加最大深度 limit `l` |
+| Iterative Deepening Search (IDS) | 迭代加深搜索 | 从小到大反复跑 DLS |
+| Branching Factor `b` | 分支因子 | 每个 node 最多 successors 数 |
+| Shallowest Goal Depth `d` | 最浅目标深度 | 最近 solution 的 depth |
+| Maximum Depth `m` | 最大深度 | search space 中最长 path 的深度，可能 infinite |
+
+---
+
 ## 01 · Before
 
 ### Big Question

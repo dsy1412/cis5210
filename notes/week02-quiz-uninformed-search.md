@@ -14,6 +14,53 @@ search strategy
 -> space complexity
 ```
 
+## 00 · Quick Review First
+
+### Read With These Questions
+
+1. completeness 和 optimality 的区别是什么？
+2. `b`、`d`、`m`、`C*` 各自是什么意思？
+3. 为什么 BFS 的 time 和 space 都是 `O(b^d)`？
+4. 为什么 BFS 不主要依赖 maximum depth `m`？
+5. DFS 的 time 可能看 `m`，但 space 为什么只需要线性级别？
+6. DLS 的 limit `l` 太小会导致什么问题？
+7. IDS 为什么结合了 BFS 的 completeness / optimality 和 DFS 的 low space？
+8. 当 step cost 不都相等时，BFS 的 optimality 为什么不成立？
+
+### One-Minute Map
+
+```text
+quiz asks algorithm properties
+-> define symbols: b, d, m, C*
+-> know frontier order
+-> derive time from generated nodes
+-> derive space from stored frontier/path
+-> attach assumptions: finite branching, unit cost, no infinite loops
+```
+
+一句话记忆：
+
+> For uninformed search, the data structure behind the frontier almost entirely determines the algorithm's behavior.
+
+### Professional Terms
+
+| Term | 中文 | Quick Meaning |
+| --- | --- | --- |
+| Completeness | 完备性 | 有解时是否保证找到一个解 |
+| Optimality | 最优性 | 找到的第一个解是否最低 path cost |
+| Time Complexity | 时间复杂度 | 最坏情况下生成 / 展开多少 nodes |
+| Space Complexity | 空间复杂度 | 最坏情况下同时存多少 nodes |
+| Branching Factor `b` | 分支因子 | 每个 node 最多 successors 数 |
+| Shallowest Goal Depth `d` | 最浅目标深度 | 最近 goal node 的 depth |
+| Maximum Depth `m` | 最大深度 | search space 中最长 path 的 depth |
+| Optimal Cost `C*` | 最优代价 | lowest-cost solution 的 total path cost |
+| Frontier | 边界 | generated but not yet expanded nodes |
+| Breadth-First Search (BFS) | 广度优先 | FIFO，level by level |
+| Depth-First Search (DFS) | 深度优先 | LIFO，one path deep first |
+| Depth-Limited Search (DLS) | 深度限制 | DFS with cutoff `l` |
+| Iterative Deepening Search (IDS) | 迭代加深 | repeated DLS from depth 0 to `d` |
+| Unit Step Cost | 单位步长代价 | 每个 action cost 都一样 |
+
 ---
 
 ## 01 · Search Evaluation Criteria
