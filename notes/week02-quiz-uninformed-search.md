@@ -63,6 +63,8 @@ quiz asks algorithm properties
 
 ---
 
+<a id="01--search-evaluation-criteria"></a>
+
 ## 01 · Search Evaluation Criteria
 
 评价一个 search strategy，通常看四件事：
@@ -79,6 +81,8 @@ quiz asks algorithm properties
 > optimality 不是“能不能找到一个解”，而是“找到的第一个解是不是最低 path cost 的解”。
 
 ---
+
+<a id="02--important-symbols-b--d--m--c"></a>
 
 ## 02 · Important Symbols: `b / d / m / C*`
 
@@ -174,6 +178,8 @@ finite branching factor
 
 如果 `b` 是 infinite，某一层本身可能永远展开不完。
 
+<a id="optimality"></a>
+
 ### Optimality
 
 BFS is optimal if every action has the same cost.
@@ -198,6 +204,8 @@ Path B: 3 steps, cost 3
 BFS 可能先找到 Path A，但 Path B 才是 lower-cost solution。
 
 ---
+
+<a id="05--bfs-time-and-space-complexity"></a>
 
 ## 05 · BFS Time and Space Complexity
 
@@ -254,6 +262,8 @@ One-paragraph quiz answer:
 
 ---
 
+<a id="06--depth-first-search"></a>
+
 ## 06 · Depth-First Search
 
 ### Core Idea
@@ -289,6 +299,8 @@ Common quiz sentence:
 
 ---
 
+<a id="07--depth-limited-search"></a>
+
 ## 07 · Depth-Limited Search
 
 Depth-limited search is DFS with a fixed depth limit `l`.
@@ -318,6 +330,8 @@ Main idea:
 > DLS fixes DFS's infinite-depth problem only if the limit is chosen well.
 
 ---
+
+<a id="08--iterative-deepening-search"></a>
 
 ## 08 · Iterative Deepening Search
 

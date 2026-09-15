@@ -89,6 +89,8 @@ special methods: __init__ __neg__ __add__ __sub__ __mul__ __call__ __str__
 
 ---
 
+<a id="02--python-类型strong--dynamic"></a>
+
 ## 02 · Python 类型：strong + dynamic
 
 Python 同时是：
@@ -121,6 +123,8 @@ $$
 C / Java 更接近 static；JavaScript 的 `"3" + 4 == "34"` 更接近 weak。后面 search 里把 state 写成 tuple 还是 list，本质也是在选对象的类型与可变性，而不是在选变量名的类型。
 
 ---
+
+<a id="03--dict-key-必须可哈希"></a>
 
 ## 03 · Dict key 必须可哈希
 
@@ -159,6 +163,8 @@ $$
 
 ---
 
+<a id="04--字符串拼接-vs-join"></a>
+
 ## 04 · 字符串拼接：`+=` vs `join`
 
 ```python
@@ -185,6 +191,8 @@ $$
 作业后半的 `normalize`、`no_vowels`、`digits_to_words`、`Polynomial.__str__` 都走同一条路：先收集片段，最后 `join`。
 
 ---
+
+<a id="05--list-comprehension"></a>
 
 ## 05 · List comprehension
 
@@ -264,6 +272,8 @@ transpose([[1, 2], [3, 4], [5, 6]])    # [[1, 3, 5], [2, 4, 6]]
 
 ---
 
+<a id="06--sequence-slicing"></a>
+
 ## 06 · Sequence slicing
 
 通用形式：
@@ -337,6 +347,8 @@ $$
 $$
 
 ---
+
+<a id="07--generators"></a>
 
 ## 07 · Generators
 
@@ -482,6 +494,8 @@ to_mixed_case("___")                 # ''
 
 ---
 
+<a id="09--polynomial-类"></a>
+
 ## 09 · Polynomial 类
 
 这是作业的主菜。内部表示是 **coefficient-power 对的 tuple**，例如 $2x+1$ 存成：
@@ -491,6 +505,8 @@ to_mixed_case("___")                 # ''
 ```
 
 顺序按构造时的顺序，不自动化简。可以把它想成「项的序列」，还不是数学上已经合并同类项的多项式。
+
+<a id="不可变内部表示"></a>
 
 ### 不可变内部表示
 
@@ -548,6 +564,8 @@ def __call__(self, x):
 $$
 p(x)=\sum_i c_i x^{k_i}
 $$
+
+<a id="simplify"></a>
 
 ### `simplify`
 
@@ -619,6 +637,8 @@ $$
 $$
 
 ---
+
+<a id="10--numpy-与-nltk"></a>
 
 ## 10 · numpy 与 NLTK
 

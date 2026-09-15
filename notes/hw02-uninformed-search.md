@@ -110,6 +110,8 @@ $$
 
 这个 restriction 合理，是因为合法 N-Queens solution 本来就不可能有两只 queen 在同一 row。
 
+<a id="board-representation"></a>
+
 ### Board Representation
 
 作业用 list 表示 board：
@@ -135,6 +137,8 @@ Partial board 也用同样表示：
 
 表示前 3 行已经放好 queen。
 
+<a id="validity-check"></a>
+
 ### Validity Check
 
 两只 queen 会互相攻击，如果：
@@ -159,6 +163,8 @@ seen_diag_up
 
 如果新 queen 的 column 或 diagonal 已出现，就 invalid。
 
+<a id="dfs--backtracking"></a>
+
 ### DFS / Backtracking
 
 搜索方式：
@@ -176,6 +182,8 @@ when length == n, yield complete solution
 ---
 
 ## 03 · Lights Out
+
+<a id="state-representation"></a>
 
 ### State Representation
 
@@ -198,6 +206,8 @@ tuple(tuple(row) for row in board)
 mutable list -> not hashable
 immutable tuple -> hashable if elements are hashable
 ```
+
+<a id="move--transition"></a>
 
 ### Move / Transition
 
@@ -224,6 +234,8 @@ for every row, col:
 
 必须用 copy，不能直接改当前 puzzle，否则 successor generation 会污染原状态。
 
+<a id="bfs-solver"></a>
+
 ### BFS Solver
 
 `find_solution` 用 BFS graph search：
@@ -247,6 +259,8 @@ BFS 为什么能返回 optimal solution？
 如果 board 不可解，frontier 最后会空，返回 `None`。
 
 ---
+
+<a id="04--linear-disk-movement"></a>
 
 ## 04 · Linear Disk Movement
 
@@ -306,6 +320,8 @@ goal:  (-1, -1, 2, 1, 0)
 
 目标顺序是 reversed，因为第一个 disk 要去最右边，第二个去倒数第二个，以此类推。
 
+<a id="disk-successors"></a>
+
 ### Disk Successors
 
 对每个 disk，尝试 4 种 step：
@@ -326,6 +342,8 @@ goal:  (-1, -1, 2, 1, 0)
 ((from, to), next_state)
 ```
 
+<a id="why-bfs"></a>
+
 ### Why BFS
 
 题目要求 optimal solution，也就是最少 moves。
@@ -333,6 +351,8 @@ goal:  (-1, -1, 2, 1, 0)
 每个 disk move 的 cost 都是 1，因此 BFS 第一次到达 goal 时就是 shortest solution。
 
 ---
+
+<a id="05--common-mistakes"></a>
 
 ## 05 · Common Mistakes
 

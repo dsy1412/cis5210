@@ -70,6 +70,8 @@ estimate remaining cost
 
 ---
 
+<a id="01--heuristic-function"></a>
+
 ## 01 · Heuristic Function
 
 A heuristic function estimates the remaining cost from a state / node to a goal.
@@ -104,6 +106,8 @@ heuristic = ranking signal
 
 ---
 
+<a id="02--greedy-best-first-search"></a>
+
 ## 02 · Greedy Best-First Search
 
 Greedy best-first search chooses the node with the smallest heuristic value.
@@ -136,6 +140,8 @@ Node B: already spent cost 2, h=5
 Greedy prefers A because `h(A) < h(B)`，但 A 的 total path 可能更差。
 
 ---
+
+<a id="03--a-search"></a>
 
 ## 03 · A* Search
 
@@ -182,6 +188,8 @@ If:
 A* expands A next because it has the smallest $f(n)$.
 
 ---
+
+<a id="04--gn-is-actual-cost-so-far"></a>
 
 ## 04 · `g(n)` Is Actual Cost So Far
 
@@ -243,6 +251,8 @@ past cost + future estimate
 > Greedy 看“前面还剩多少”；A* 同时看“已经花了多少”和“估计还剩多少”。
 
 ---
+
+<a id="06--admissible-heuristic"></a>
 
 ## 06 · Admissible Heuristic
 
@@ -306,6 +316,8 @@ This is like saying:
 
 ---
 
+<a id="08--consistency-vs-admissibility"></a>
+
 ## 08 · Consistency vs Admissibility
 
 Key relationship:
@@ -361,6 +373,8 @@ This is why quizzes often ask whether the setting is tree search or graph search
 
 ---
 
+<a id="10--dominant-heuristic"></a>
+
 ## 10 · Dominant Heuristic
 
 Suppose $h_1$ and $h_2$ are both admissible.
@@ -406,6 +420,8 @@ Common mistake:
 
 ---
 
+<a id="11--relaxed-problem"></a>
+
 ## 11 · Relaxed Problem
 
 A relaxed problem is a simpler version of the original problem where one or more constraints are removed.
@@ -435,6 +451,8 @@ relaxed problem is easier
 > 放宽规则后，解题不会更难，所以 relaxed solution cost 是真实 cost 的下界。
 
 ---
+
+<a id="12--manhattan-distance-for-the-8-puzzle"></a>
 
 ## 12 · Manhattan Distance for the 8-Puzzle
 
@@ -500,6 +518,8 @@ So the Manhattan heuristic for this state is:
 ```
 
 ---
+
+<a id="13--practical-a-implementation-idea"></a>
 
 ## 13 · Practical A* Implementation Idea
 

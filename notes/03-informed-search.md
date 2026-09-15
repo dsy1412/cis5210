@@ -87,6 +87,8 @@ BFS / DFS / IDS
 -> admissible heuristic gives optimality for A* tree search
 ```
 
+<a id="key-symbols"></a>
+
 ### Key Symbols
 
 | Symbol | Meaning | 中文直觉 |
@@ -105,6 +107,8 @@ f = full estimated cost
 ```
 
 ---
+
+<a id="02--from-unit-cost-to-weighted-cost"></a>
 
 ## 02 · From Unit Cost to Weighted Cost
 
@@ -190,6 +194,8 @@ $$
 Path cost is additive.
 
 The lecture assumes positive / nonnegative costs so that cost does not decrease as a path gets longer.
+
+<a id="ucs-vs-bfs-goal-test-timing"></a>
 
 ### UCS vs BFS Goal Test Timing
 
@@ -279,6 +285,8 @@ Different choices of $f(n)$ give different algorithms:
 | A* | $f(n)=g(n)+h(n)$ | lowest estimated total cost |
 
 ---
+
+<a id="05--heuristic-functions"></a>
 
 ## 05 · Heuristic Functions
 
@@ -416,6 +424,8 @@ Path cost:
 
 So greedy is not optimal.
 
+<a id="greedy-properties"></a>
+
 ### Greedy Properties
 
 | Property | Greedy best-first search |
@@ -465,6 +475,8 @@ Implementation:
 ```text
 frontier = priority queue ordered by increasing f(n)
 ```
+
+<a id="why-a-is-less-reckless-than-greedy"></a>
 
 ### Why A* Is Less Reckless Than Greedy
 
@@ -536,6 +548,8 @@ But it cannot overestimate:
 ```text
 "I think goal is farther than it really is"
 ```
+
+<a id="why-overestimating-is-dangerous"></a>
 
 ### Why Overestimating Is Dangerous
 
@@ -719,6 +733,8 @@ h_oop(n) = 8
 
 This is admissible because each misplaced tile must move at least once.
 
+<a id="manhattan-distance"></a>
+
 ### Manhattan Distance
 
 Manhattan distance:
@@ -743,6 +759,8 @@ h_md(S) = 3 + 1 + 2 + 2 + 2 + 3 + 3 + 2 = 18
 ```
 
 ---
+
+<a id="12--relaxed-problems"></a>
 
 ## 12 · Relaxed Problems
 
@@ -826,6 +844,8 @@ Takeaway:
 
 ---
 
+<a id="14--best-and-worst-admissible-heuristics"></a>
+
 ## 14 · Best and Worst Admissible Heuristics
 
 Best admissible heuristic:
@@ -890,6 +910,8 @@ A*:
 ```
 
 ---
+
+<a id="16--a-applications"></a>
 
 ## 16 · A* Applications
 

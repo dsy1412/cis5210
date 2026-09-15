@@ -82,6 +82,8 @@ Python mechanics
 
 ## 02 · Python Objects and Classes
 
+<a id="class-instance-attribute-method"></a>
+
 ### Class, Instance, Attribute, Method
 
 Simple explanation:
@@ -444,6 +446,8 @@ Comparison:
 
 ---
 
+<a id="06--data-structures-for-graph-search"></a>
+
 ## 06 · Data Structures for Graph Search
 
 A graph-search algorithm usually needs:
@@ -451,6 +455,8 @@ A graph-search algorithm usually needs:
 1. frontier（边界 / 待探索节点）
 2. visited set（已访问集合）
 3. predecessor map（前驱映射）
+
+<a id="frontier-bfs-vs-dfs-vs-best-first"></a>
 
 ### Frontier: BFS vs DFS vs Best-First
 
@@ -544,6 +550,8 @@ goal -> parent -> parent -> ... -> start
 
 ## 07 · Agent Types
 
+<a id="table-driven-agent"></a>
+
 ### Table-Driven Agent
 
 A table-driven agent stores:
@@ -577,6 +585,8 @@ Important characteristics:
 Main problem:
 
 > Table-driven agents do not scale because the table grows very quickly as percept history becomes longer.
+
+<a id="reflex-goal-utility-and-learning-agents"></a>
 
 ### Reflex, Goal, Utility, and Learning Agents
 
@@ -642,6 +652,8 @@ For example:
 
 These may be implementation choices, but they are not the main abstract design steps.
 
+<a id="peas"></a>
+
 ### PEAS
 
 PEAS means:
@@ -704,6 +716,8 @@ Step 6: Improve the design.
 > Adjust utility weights and decision logic based on failure cases.
 
 ---
+
+<a id="09--environment-properties"></a>
 
 ## 09 · Environment Properties
 
@@ -843,6 +857,8 @@ Reason:
 
 ---
 
+<a id="10--rationality-and-bad-outcomes"></a>
+
 ## 10 · Rationality and Bad Outcomes
 
 A rational agent is not the same as an omniscient agent.
@@ -878,6 +894,8 @@ Important idea:
 > A bad outcome does not automatically mean the earlier decision was irrational.
 
 ---
+
+<a id="11--ethics-mortgage-approval-ai"></a>
 
 ## 11 · Ethics: Mortgage Approval AI
 

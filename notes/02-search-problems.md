@@ -120,6 +120,8 @@ Module 1 说 rational agent 要根据 percept sequence 选择 expected performan
 
 ## 02 · Notes
 
+<a id="reflex-agent-vs-problem-solving-agent"></a>
+
 ### Reflex Agent vs Problem-Solving Agent
 
 Simple reflex agent（简单反射 agent）只看 current percept（当前感知）：
@@ -236,6 +238,8 @@ $$
 这样做不是因为真实世界都这么简单，而是因为要先把 search 的数学骨架学清楚。
 
 ---
+
+<a id="04--formal-definition-of-a-search-problem"></a>
 
 ## 04 · Formal Definition of a Search Problem
 
@@ -693,6 +697,8 @@ s0 -> s1 -> s2 -> goal
 a0, a1, a2, ...
 ```
 
+<a id="frontier"></a>
+
 ### Frontier
 
 Frontier（边界 / 待展开集合）是：
@@ -732,6 +738,8 @@ Solution 是从 initial state 到 goal state 的 path。
 Optimal solution 是没有其他 solution 有更低 path cost。
 
 ---
+
+<a id="10--state-vs-node"></a>
 
 ## 10 · State vs Node
 
@@ -816,6 +824,8 @@ different parent path
 这就是为什么 slide 上可以画出一棵 tree，即使原始问题本质上是 graph。
 
 ---
+
+<a id="12--repeated-states-and-graph-search"></a>
 
 ## 12 · Repeated States and Graph Search
 
@@ -940,6 +950,8 @@ because heuristic information says they look more promising
 
 ---
 
+<a id="14--how-to-evaluate-search-strategies"></a>
+
 ## 14 · How to Evaluate Search Strategies
 
 一个 search strategy 通常从四个维度评价：
@@ -980,6 +992,8 @@ Big-O 会忽略常数倍，所以我们关心的是随着 $b,d,m$ 增长，memor
 对 search 来说，space 往往非常关键，因为 frontier、explored set、parent pointers 都要占内存。
 
 ---
+
+<a id="15--breadth-first-search"></a>
 
 ## 15 · Breadth-First Search
 
@@ -1083,6 +1097,8 @@ $$
 
 ---
 
+<a id="16--depth-first-search"></a>
+
 ## 16 · Depth-First Search
 
 DFS expands the deepest unexpanded node first.
@@ -1180,6 +1196,8 @@ DFS = deep and cheap but risky
 
 ---
 
+<a id="18--depth-limited-search"></a>
+
 ## 18 · Depth-Limited Search
 
 Depth-limited search 是 DFS with a depth limit $l$。
@@ -1262,6 +1280,8 @@ Complexity:
 Depth-limited search by itself is not the final win. It is the building block for iterative deepening.
 
 ---
+
+<a id="19--iterative-deepening-search"></a>
 
 ## 19 · Iterative Deepening Search
 
