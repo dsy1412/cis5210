@@ -14,16 +14,16 @@ Source: CIS5210 Homework 1 (Python Skills, 105 points) and the submitted `homewo
 
 ### Read With These Questions
 
-1. Python 为什么是 strongly typed 但 dynamically typed？
-2. 哪些对象可以当 dict key？为什么 list 不行、tuple 通常可以？
-3. slicing 会不会复制？什么时候是 shallow copy？
-4. list comprehension 的 `for` 和 `if` 顺序怎么读？
-5. generator 和 list 的区别是什么？`yield` 什么时候真正执行？
-6. 字符串为什么用 `join` 比反复 `+=` 更合适？
-7. `Polynomial` 的内部表示为什么要保持不可变或不被外部 alias 修改？
-8. `__add__`、`__mul__`、`__call__`、`__str__` 分别让对象像什么一样工作？
-9. `simplify` 应该处理哪些边界：零系数、同次项、空 polynomial、符号显示？
-10. numpy / NLTK 题目在考 library call，还是在考输入输出 shape？
+1. Python 为什么是 [strongly typed 但 dynamically typed](#02--python-类型strong--dynamic)？
+2. 哪些对象可以当 [dict key](#03--dict-key-必须可哈希)？为什么 list 不行、tuple 通常可以？
+3. [slicing](#06--sequence-slicing) 会不会复制？什么时候是 shallow copy？
+4. [list comprehension](#05--list-comprehension) 的 `for` 和 `if` 顺序怎么读？
+5. [generator](#07--generators) 和 list 的区别是什么？`yield` 什么时候真正执行？
+6. 字符串为什么用 [`join`](#04--字符串拼接-vs-join) 比反复 `+=` 更合适？
+7. [`Polynomial`](#09--polynomial-类) 的内部表示为什么要保持不可变或不被外部 alias 修改？
+8. [`__add__`、`__mul__`、`__call__`、`__str__`](#09--polynomial-类) 分别让对象像什么一样工作？
+9. [`simplify`](#simplify) 应该处理哪些边界：零系数、同次项、空 polynomial、符号显示？
+10. [numpy / NLTK](#10--numpy-与-nltk) 题目在考 library call，还是在考输入输出 shape？
 
 ### One-Minute Map
 
@@ -39,19 +39,6 @@ Python object model
 一句话记忆：
 
 > HW1 is Python fluency for future AI code: represent data cleanly, avoid aliasing mistakes, and make objects behave predictably.
-
-### Jump to Core Sections
-
-- [Homework constraints](#01--作业约束)
-- [Python strong + dynamic typing](#02--python-类型strong--dynamic)
-- [Dict keys and hashability](#03--dict-key-必须可哈希)
-- [String concatenation and join](#04--字符串拼接-vs-join)
-- [List comprehension](#05--list-comprehension)
-- [Sequence slicing](#06--sequence-slicing)
-- [Generators](#07--generators)
-- [Text processing](#08--文本处理)
-- [Polynomial class](#09--polynomial-类)
-- [numpy and NLTK](#10--numpy-与-nltk)
 
 ### Professional Terms
 

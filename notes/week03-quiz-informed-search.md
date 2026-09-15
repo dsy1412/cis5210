@@ -23,16 +23,16 @@ heuristic h(n)
 
 ### Read With These Questions
 
-1. heuristic function `h(n)` 估计的是哪一段 cost？
-2. `g(n)` 和 `h(n)` 为什么不能混？`f(n)` 是怎么来的？
-3. Greedy best-first search 的 `f(n)` 是什么？它为什么可能 not optimal？
-4. A* 的 `f(n)` 是什么？它为什么比 greedy 更谨慎？
-5. admissible heuristic 的不等式是什么？
-6. consistent heuristic 和 admissible heuristic 的关系是什么？
-7. dominant heuristic 为什么通常能减少 node expansions？
-8. relaxed problem 为什么能给出 lower bound？
-9. Manhattan distance 在 8-puzzle 中怎么算？为什么比 misplaced tiles 更强？
-10. 写 A* 代码时，priority queue 里存什么？visited / best-known cost 怎么处理？
+1. [heuristic function `h(n)`](#01--heuristic-function) 估计的是哪一段 cost？
+2. [`g(n)` 和 `h(n)`](#04--gn-is-actual-cost-so-far) 为什么不能混？`f(n)` 是怎么来的？
+3. [Greedy best-first search](#02--greedy-best-first-search) 的 `f(n)` 是什么？它为什么可能 not optimal？
+4. [A*](#03--a-search) 的 `f(n)` 是什么？它为什么比 greedy 更谨慎？
+5. [admissible heuristic](#06--admissible-heuristic) 的不等式是什么？
+6. [consistent heuristic 和 admissible heuristic](#08--consistency-vs-admissibility) 的关系是什么？
+7. [dominant heuristic](#10--dominant-heuristic) 为什么通常能减少 node expansions？
+8. [relaxed problem](#11--relaxed-problem) 为什么能给出 lower bound？
+9. [Manhattan distance](#12--manhattan-distance-for-the-8-puzzle) 在 8-puzzle 中怎么算？为什么比 misplaced tiles 更强？
+10. 写 [A* 代码](#13--practical-a-implementation-idea) 时，priority queue 里存什么？visited / best-known cost 怎么处理？
 
 ### One-Minute Map
 
@@ -48,19 +48,6 @@ estimate remaining cost
 一句话记忆：
 
 > A* is UCS plus a safe estimate of the remaining cost.
-
-### Jump to Core Sections
-
-- [Heuristic function](#01--heuristic-function)
-- [Greedy best-first search](#02--greedy-best-first-search)
-- [A* search](#03--a-search)
-- [g(n) as actual cost so far](#04--gn-is-actual-cost-so-far)
-- [Greedy vs A*](#05--greedy-vs-a)
-- [Admissible heuristic](#06--admissible-heuristic)
-- [Consistent heuristic](#07--consistent-heuristic)
-- [Dominant heuristic](#10--dominant-heuristic)
-- [Relaxed problem](#11--relaxed-problem)
-- [Manhattan distance for 8-puzzle](#12--manhattan-distance-for-the-8-puzzle)
 
 ### Professional Terms
 

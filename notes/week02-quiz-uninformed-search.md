@@ -18,14 +18,14 @@ search strategy
 
 ### Read With These Questions
 
-1. completeness 和 optimality 的区别是什么？
-2. `b`、`d`、`m`、`C*` 各自是什么意思？
-3. 为什么 BFS 的 time 和 space 都是 `O(b^d)`？
-4. 为什么 BFS 不主要依赖 maximum depth `m`？
-5. DFS 的 time 可能看 `m`，但 space 为什么只需要线性级别？
-6. DLS 的 limit `l` 太小会导致什么问题？
-7. IDS 为什么结合了 BFS 的 completeness / optimality 和 DFS 的 low space？
-8. 当 step cost 不都相等时，BFS 的 optimality 为什么不成立？
+1. [completeness 和 optimality](#01--search-evaluation-criteria) 的区别是什么？
+2. [`b`、`d`、`m`、`C*`](#02--important-symbols-b--d--m--c) 各自是什么意思？
+3. 为什么 [BFS 的 time 和 space](#05--bfs-time-and-space-complexity) 都是 `O(b^d)`？
+4. 为什么 [BFS 不主要依赖 maximum depth `m`](#05--bfs-time-and-space-complexity)？
+5. [DFS](#06--depth-first-search) 的 time 可能看 `m`，但 space 为什么只需要线性级别？
+6. [DLS](#07--depth-limited-search) 的 limit `l` 太小会导致什么问题？
+7. [IDS](#08--iterative-deepening-search) 为什么结合了 BFS 的 completeness / optimality 和 DFS 的 low space？
+8. 当 step cost 不都相等时，[BFS 的 optimality](#optimality) 为什么不成立？
 
 ### One-Minute Map
 
@@ -41,18 +41,6 @@ quiz asks algorithm properties
 一句话记忆：
 
 > For uninformed search, the data structure behind the frontier almost entirely determines the algorithm's behavior.
-
-### Jump to Core Sections
-
-- [Search evaluation criteria](#01--search-evaluation-criteria)
-- [Important symbols: b, d, m, C*](#02--important-symbols-b--d--m--c)
-- [State space and frontier](#03--state-space-and-frontier)
-- [Breadth-first search](#04--breadth-first-search)
-- [BFS time and space complexity](#05--bfs-time-and-space-complexity)
-- [Depth-first search](#06--depth-first-search)
-- [Depth-limited search](#07--depth-limited-search)
-- [Iterative deepening search](#08--iterative-deepening-search)
-- [BFS / DFS / IDS space comparison](#09--bfs--dfs--ids-space-comparison)
 
 ### Professional Terms
 
