@@ -14,16 +14,16 @@ Source: CIS5210 Homework 1 (Python Skills, 105 points) and the submitted `homewo
 
 ### Read With These Questions
 
-1. Python 为什么是 [strongly typed 但 dynamically typed](#02--python-类型strong--dynamic)？
-2. 哪些对象可以当 [dict key](#03--dict-key-必须可哈希)？为什么 list 不行、tuple 通常可以？
-3. [slicing](#06--sequence-slicing) 会不会复制？什么时候是 shallow copy？
-4. [list comprehension](#05--list-comprehension) 的 `for` 和 `if` 顺序怎么读？
-5. [generator](#07--generators) 和 list 的区别是什么？`yield` 什么时候真正执行？
-6. 字符串为什么用 [`join`](#04--字符串拼接-vs-join) 比反复 `+=` 更合适？
-7. [`Polynomial`](#09--polynomial-类) 的内部表示为什么要保持不可变或不被外部 alias 修改？
-8. [`__add__`、`__mul__`、`__call__`、`__str__`](#09--polynomial-类) 分别让对象像什么一样工作？
-9. [`simplify`](#simplify) 应该处理哪些边界：零系数、同次项、空 polynomial、符号显示？
-10. [numpy / NLTK](#10--numpy-与-nltk) 题目在考 library call，还是在考输入输出 shape？
+1. Python 为什么是 strongly typed 但 dynamically typed？[答案](#02--python-类型strong--dynamic)
+2. 哪些对象可以当 dict key？为什么 list 不行、tuple 通常可以？[答案](#03--dict-key-必须可哈希)
+3. slicing 会不会复制？什么时候是 shallow copy？[答案](#06--sequence-slicing)
+4. list comprehension 的 `for` 和 `if` 顺序怎么读？[答案](#05--list-comprehension)
+5. generator 和 list 的区别是什么？`yield` 什么时候真正执行？[答案](#07--generators)
+6. 字符串为什么用 `join` 比反复 `+=` 更合适？[答案](#04--字符串拼接-vs-join)
+7. `Polynomial` 的内部表示为什么要保持不可变或不被外部 alias 修改？[答案](#不可变内部表示)
+8. `__add__`、`__mul__`、`__call__`、`__str__` 分别让对象像什么一样工作？[答案](#09--polynomial-类)
+9. `simplify` 应该处理哪些边界：零系数、同次项、空 polynomial、符号显示？[答案](#simplify)
+10. numpy / NLTK 题目在考 library call，还是在考输入输出 shape？[答案](#10--numpy-与-nltk)
 
 ### One-Minute Map
 

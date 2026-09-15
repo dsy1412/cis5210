@@ -23,16 +23,16 @@ problem formulation
 
 ### Read With These Questions
 
-1. [N-Queens](#02--n-queens) 为什么可以用 row-by-row representation，而不是存整个棋盘？
-2. [diagonal constraint](#validity-check) 怎么用 row difference 和 column difference 判断？
-3. [DFS / backtracking](#dfs--backtracking) 在 N-Queens 中什么时候 append partial board，什么时候回退？
-4. [Lights Out 的 state](#state-representation) 为什么最好转成 hashable representation 再放进 visited set？
-5. [toggle](#move--transition) 一个 cell 时，哪些 neighbor 会变化？边界如何处理？
-6. [BFS solver](#bfs-solver) 里 frontier 存的是 state 还是 path？如何返回 move sequence？
-7. [identical disks](#identical-disks) 和 [distinct disks](#distinct-disks) 的 goal test 有什么不同？
-8. disk movement 里 [slide move 和 jump move](#disk-successors) 的合法条件是什么？
-9. 为什么这些 puzzle solver 用 [BFS](#why-bfs) 能保证 shortest move sequence？
-10. [state representation 选错](#05--common-mistakes)会造成哪些 bug：重复 state、mutating visited、path 丢失？
+1. N-Queens 为什么可以用 row-by-row representation，而不是存整个棋盘？[答案](#board-representation)
+2. diagonal constraint 怎么用 row difference 和 column difference 判断？[答案](#validity-check)
+3. DFS / backtracking 在 N-Queens 中什么时候 append partial board，什么时候回退？[答案](#dfs--backtracking)
+4. Lights Out 的 state 为什么最好转成 hashable representation 再放进 visited set？[答案](#state-representation)
+5. toggle 一个 cell 时，哪些 neighbor 会变化？边界如何处理？[答案](#move--transition)
+6. BFS solver 里 frontier 存的是 state 还是 path？如何返回 move sequence？[答案](#bfs-solver)
+7. identical disks 和 distinct disks 的 goal test 有什么不同？[答案](#04--linear-disk-movement)
+8. disk movement 里 slide move 和 jump move 的合法条件是什么？[答案](#disk-successors)
+9. 为什么这些 puzzle solver 用 BFS 能保证 shortest move sequence？[答案](#why-bfs)
+10. state representation 选错会造成哪些 bug：重复 state、mutating visited、path 丢失？[答案](#05--common-mistakes)
 
 ### One-Minute Map
 

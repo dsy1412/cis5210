@@ -10,18 +10,18 @@ This note treats the attached course materials as source material only. It recor
 
 ### Read With These Questions
 
-1. [BFS 假设 unit step cost](#02--from-unit-cost-to-weighted-cost) 时合理；edge cost 不同的时候为什么要换成 UCS？
-2. [UCS 的 priority](#03--uniform-cost-search) 是什么？为什么它要在 [goal 被 popped / selected for expansion](#ucs-vs-bfs-goal-test-timing) 时才停止？
-3. [`g(n)`、`h(n)`、`f(n)`](#key-symbols) 分别代表什么？
-4. [heuristic function](#05--heuristic-functions) 为什么只是 estimate，不是 true cost？
-5. [Greedy best-first search](#06--greedy-best-first-search) 为什么可能很快，但不保证 optimal？
-6. [A* 为什么把 `g(n)` 和 `h(n)` 加起来](#why-a-is-less-reckless-than-greedy)，而不是只看其中一个？
-7. [admissible heuristic](#08--admissible-heuristics) 的核心不等式是什么？为什么不能 [overestimate](#why-overestimating-is-dangerous)？
-8. 如果 [`h(n)=0`](#14--best-and-worst-admissible-heuristics)，A* 退化成什么？
-9. 如果 [`h(n)=h*(n)`](#14--best-and-worst-admissible-heuristics)，A* 为什么几乎拥有 perfect guidance？
-10. [relaxed problem](#12--relaxed-problems) 为什么常常能产生 admissible heuristic？
-11. [Manhattan distance](#manhattan-distance) 为什么比 misplaced tiles 更 informative？
-12. [A* 可以用于哪些真实系统](#16--a-applications)？它的 guarantee 依赖哪些前提？
+1. BFS 假设 unit step cost 时合理；edge cost 不同的时候为什么要换成 UCS？[答案](#02--from-unit-cost-to-weighted-cost)
+2. UCS 的 priority 是什么？为什么它要在 goal 被 popped / selected for expansion 时才停止？[答案](#ucs-vs-bfs-goal-test-timing)
+3. `g(n)`、`h(n)`、`f(n)` 分别代表什么？[答案](#key-symbols)
+4. heuristic function 为什么只是 estimate，不是 true cost？[答案](#05--heuristic-functions)
+5. Greedy best-first search 为什么可能很快，但不保证 optimal？[答案](#greedy-properties)
+6. A* 为什么把 `g(n)` 和 `h(n)` 加起来，而不是只看其中一个？[答案](#why-a-is-less-reckless-than-greedy)
+7. admissible heuristic 的核心不等式是什么？为什么不能 overestimate？[答案](#why-overestimating-is-dangerous)
+8. 如果 `h(n)=0`，A* 退化成什么？[答案](#14--best-and-worst-admissible-heuristics)
+9. 如果 `h(n)=h*(n)`，A* 为什么几乎拥有 perfect guidance？[答案](#14--best-and-worst-admissible-heuristics)
+10. relaxed problem 为什么常常能产生 admissible heuristic？[答案](#12--relaxed-problems)
+11. Manhattan distance 为什么比 misplaced tiles 更 informative？[答案](#manhattan-distance)
+12. A* 可以用于哪些真实系统？它的 guarantee 依赖哪些前提？[答案](#16--a-applications)
 
 ### One-Minute Map
 

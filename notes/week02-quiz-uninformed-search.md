@@ -18,14 +18,14 @@ search strategy
 
 ### Read With These Questions
 
-1. [completeness 和 optimality](#01--search-evaluation-criteria) 的区别是什么？
-2. [`b`、`d`、`m`、`C*`](#02--important-symbols-b--d--m--c) 各自是什么意思？
-3. 为什么 [BFS 的 time 和 space](#05--bfs-time-and-space-complexity) 都是 `O(b^d)`？
-4. 为什么 [BFS 不主要依赖 maximum depth `m`](#05--bfs-time-and-space-complexity)？
-5. [DFS](#06--depth-first-search) 的 time 可能看 `m`，但 space 为什么只需要线性级别？
-6. [DLS](#07--depth-limited-search) 的 limit `l` 太小会导致什么问题？
-7. [IDS](#08--iterative-deepening-search) 为什么结合了 BFS 的 completeness / optimality 和 DFS 的 low space？
-8. 当 step cost 不都相等时，[BFS 的 optimality](#optimality) 为什么不成立？
+1. completeness 和 optimality 的区别是什么？[答案](#01--search-evaluation-criteria)
+2. `b`、`d`、`m`、`C*` 各自是什么意思？[答案](#02--important-symbols-b--d--m--c)
+3. 为什么 BFS 的 time 和 space 都是 `O(b^d)`？[答案](#05--bfs-time-and-space-complexity)
+4. 为什么 BFS 不主要依赖 maximum depth `m`？[答案](#05--bfs-time-and-space-complexity)
+5. DFS 的 time 可能看 `m`，但 space 为什么只需要线性级别？[答案](#06--depth-first-search)
+6. DLS 的 limit `l` 太小会导致什么问题？[答案](#07--depth-limited-search)
+7. IDS 为什么结合了 BFS 的 completeness / optimality 和 DFS 的 low space？[答案](#08--iterative-deepening-search)
+8. 当 step cost 不都相等时，BFS 的 optimality 为什么不成立？[答案](#optimality)
 
 ### One-Minute Map
 

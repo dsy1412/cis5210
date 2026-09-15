@@ -12,18 +12,18 @@ This note keeps the lecture's main logic. It does not try to solve the philosoph
 
 复习时先不要从细节背起，先用这组问题检查自己有没有抓住主线：
 
-1. [AI 的四种定义](#core-idea)分别是什么？这门课为什么选择 **Acting Rationally** 作为主线？
-2. [Turing Test](#turing-test-operationalizing-the-question) 测试的是 “thinking” 还是 “acting humanly”？它为什么不能证明机器真的理解？
-3. [Chinese Room](#searles-chinese-room) 想反驳什么？它怎样区分 syntax（符号操作）和 semantics（意义理解）？
-4. [ELIZA](#eliza-rule-based-conversation) 为什么是一个好例子：看起来会对话，为什么仍不等于真正理解？
-5. 为什么 [modern LLMs / AGI](#agi-returns-to-the-conversation) 让哲学问题重新回到 AI 讨论中？
-6. 什么是 [agent](#agent)？sensor、actuator、percept、percept sequence 分别是什么？
-7. [Agent function 和 agent program](#agent-function-vs-agent-program) 有什么区别？为什么 table-driven agent 不可扩展？
-8. [Rationality 为什么不等于 omniscience](#rationality-is-not-omniscience)？为什么 rational action 仍然可能产生 bad outcome？
-9. [Expected performance](#expected-performance) 和 actual performance 有什么区别？为什么 AI 更关心 expected performance？
-10. [PEAS](#task-environment-and-peas) 如何描述 task environment？给 taxi / drone 写 PEAS 时最容易混哪几项？
-11. 六个 [environment dimensions](#environment-dimensions) 是什么？为什么 self-driving car 是最难的一类环境？
-12. 为什么课程进入 [search](#course-simplification-before-search) 前要先限制在 static, fully observable, deterministic, discrete environments？
+1. AI 的四种定义分别是什么？这门课为什么选择 **Acting Rationally** 作为主线？[答案](#core-idea)
+2. Turing Test 测试的是 “thinking” 还是 “acting humanly”？它为什么不能证明机器真的理解？[答案](#turing-test-operationalizing-the-question)
+3. Chinese Room 想反驳什么？它怎样区分 syntax（符号操作）和 semantics（意义理解）？[答案](#searles-chinese-room)
+4. ELIZA 为什么是一个好例子：看起来会对话，为什么仍不等于真正理解？[答案](#eliza-rule-based-conversation)
+5. 为什么 modern LLMs / AGI 让哲学问题重新回到 AI 讨论中？[答案](#agi-returns-to-the-conversation)
+6. 什么是 agent？sensor、actuator、percept、percept sequence 分别是什么？[答案](#agent)
+7. Agent function 和 agent program 有什么区别？为什么 table-driven agent 不可扩展？[答案](#agent-function-vs-agent-program)
+8. Rationality 为什么不等于 omniscience？为什么 rational action 仍然可能产生 bad outcome？[答案](#rationality-is-not-omniscience)
+9. Expected performance 和 actual performance 有什么区别？为什么 AI 更关心 expected performance？[答案](#expected-performance)
+10. PEAS 如何描述 task environment？给 taxi / drone 写 PEAS 时最容易混哪几项？[答案](#task-environment-and-peas)
+11. 六个 environment dimensions 是什么？为什么 self-driving car 是最难的一类环境？[答案](#environment-dimensions)
+12. 为什么课程进入 search 前要先限制在 static, fully observable, deterministic, discrete environments？[答案](#course-simplification-before-search)
 
 ### One-Minute Map
 

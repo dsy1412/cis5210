@@ -10,16 +10,16 @@ This note treats the attached course materials as source material only. It recor
 
 ### Read With These Questions
 
-1. 什么情况下 [reflex agent 不够，需要 problem-solving agent](#reflex-agent-vs-problem-solving-agent)？
-2. A [search problem 的五个核心成分](#04--formal-definition-of-a-search-problem)是什么？
-3. [state 和 node](#10--state-vs-node) 的区别是什么？为什么同一个 state 可以出现在多个 node 里？
-4. [frontier](#frontier) 存的是什么？[explored set / visited set](#graph-search) 存的是什么？
-5. [tree search](#11--tree-search) 为什么会重复走回头路？[graph search](#12--repeated-states-and-graph-search) 用什么避免 repeated states？
-6. [BFS](#15--breadth-first-search) 为什么 complete？它的 optimality 需要什么假设？
-7. [DFS](#16--depth-first-search) 为什么省 memory？它为什么可能不 complete / not optimal？
-8. [Depth-limited search](#18--depth-limited-search) 的 limit `l` 小于、等于、大于 `d` 时分别会发生什么？
-9. [Iterative deepening search](#19--iterative-deepening-search) 为什么重复展开浅层节点，但时间复杂度仍然是 `O(b^d)`？
-10. [`b`、`d`、`m`](#14--how-to-evaluate-search-strategies) 分别控制哪类复杂度？为什么不能混在一起？
+1. 什么情况下 reflex agent 不够，需要 problem-solving agent？[答案](#reflex-agent-vs-problem-solving-agent)
+2. A search problem 的五个核心成分是什么？[答案](#04--formal-definition-of-a-search-problem)
+3. state 和 node 的区别是什么？为什么同一个 state 可以出现在多个 node 里？[答案](#10--state-vs-node)
+4. frontier 存的是什么？explored set / visited set 存的是什么？[答案](#frontier)
+5. tree search 为什么会重复走回头路？graph search 用什么避免 repeated states？[答案](#12--repeated-states-and-graph-search)
+6. BFS 为什么 complete？它的 optimality 需要什么假设？[答案](#15--breadth-first-search)
+7. DFS 为什么省 memory？它为什么可能不 complete / not optimal？[答案](#16--depth-first-search)
+8. Depth-limited search 的 limit `l` 小于、等于、大于 `d` 时分别会发生什么？[答案](#18--depth-limited-search)
+9. Iterative deepening search 为什么重复展开浅层节点，但时间复杂度仍然是 `O(b^d)`？[答案](#19--iterative-deepening-search)
+10. `b`、`d`、`m` 分别控制哪类复杂度？为什么不能混在一起？[答案](#14--how-to-evaluate-search-strategies)
 
 ### One-Minute Map
 
