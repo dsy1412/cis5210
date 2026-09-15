@@ -70,7 +70,7 @@ estimate remaining cost
 
 ---
 
-<a id="01--heuristic-function"></a>
+<a name="01--heuristic-function"></a>
 
 ## 01 · Heuristic Function
 
@@ -106,7 +106,7 @@ heuristic = ranking signal
 
 ---
 
-<a id="02--greedy-best-first-search"></a>
+<a name="02--greedy-best-first-search"></a>
 
 ## 02 · Greedy Best-First Search
 
@@ -141,7 +141,7 @@ Greedy prefers A because `h(A) < h(B)`，但 A 的 total path 可能更差。
 
 ---
 
-<a id="03--a-search"></a>
+<a name="03--a-search"></a>
 
 ## 03 · A* Search
 
@@ -189,7 +189,7 @@ A* expands A next because it has the smallest $f(n)$.
 
 ---
 
-<a id="04--gn-is-actual-cost-so-far"></a>
+<a name="04--gn-is-actual-cost-so-far"></a>
 
 ## 04 · `g(n)` Is Actual Cost So Far
 
@@ -252,7 +252,7 @@ past cost + future estimate
 
 ---
 
-<a id="06--admissible-heuristic"></a>
+<a name="06--admissible-heuristic"></a>
 
 ## 06 · Admissible Heuristic
 
@@ -316,7 +316,7 @@ This is like saying:
 
 ---
 
-<a id="08--consistency-vs-admissibility"></a>
+<a name="08--consistency-vs-admissibility"></a>
 
 ## 08 · Consistency vs Admissibility
 
@@ -373,7 +373,7 @@ This is why quizzes often ask whether the setting is tree search or graph search
 
 ---
 
-<a id="10--dominant-heuristic"></a>
+<a name="10--dominant-heuristic"></a>
 
 ## 10 · Dominant Heuristic
 
@@ -420,7 +420,7 @@ Common mistake:
 
 ---
 
-<a id="11--relaxed-problem"></a>
+<a name="11--relaxed-problem"></a>
 
 ## 11 · Relaxed Problem
 
@@ -452,7 +452,7 @@ relaxed problem is easier
 
 ---
 
-<a id="12--manhattan-distance-for-the-8-puzzle"></a>
+<a name="12--manhattan-distance-for-the-8-puzzle"></a>
 
 ## 12 · Manhattan Distance for the 8-Puzzle
 
@@ -519,7 +519,7 @@ So the Manhattan heuristic for this state is:
 
 ---
 
-<a id="13--practical-a-implementation-idea"></a>
+<a name="13--practical-a-implementation-idea"></a>
 
 ## 13 · Practical A* Implementation Idea
 

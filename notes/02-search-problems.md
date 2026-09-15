@@ -120,7 +120,7 @@ Module 1 说 rational agent 要根据 percept sequence 选择 expected performan
 
 ## 02 · Notes
 
-<a id="reflex-agent-vs-problem-solving-agent"></a>
+<a name="reflex-agent-vs-problem-solving-agent"></a>
 
 ### Reflex Agent vs Problem-Solving Agent
 
@@ -239,7 +239,7 @@ $$
 
 ---
 
-<a id="04--formal-definition-of-a-search-problem"></a>
+<a name="04--formal-definition-of-a-search-problem"></a>
 
 ## 04 · Formal Definition of a Search Problem
 
@@ -697,7 +697,7 @@ s0 -> s1 -> s2 -> goal
 a0, a1, a2, ...
 ```
 
-<a id="frontier"></a>
+<a name="frontier"></a>
 
 ### Frontier
 
@@ -739,7 +739,7 @@ Optimal solution 是没有其他 solution 有更低 path cost。
 
 ---
 
-<a id="10--state-vs-node"></a>
+<a name="10--state-vs-node"></a>
 
 ## 10 · State vs Node
 
@@ -825,7 +825,7 @@ different parent path
 
 ---
 
-<a id="12--repeated-states-and-graph-search"></a>
+<a name="12--repeated-states-and-graph-search"></a>
 
 ## 12 · Repeated States and Graph Search
 
@@ -950,7 +950,7 @@ because heuristic information says they look more promising
 
 ---
 
-<a id="14--how-to-evaluate-search-strategies"></a>
+<a name="14--how-to-evaluate-search-strategies"></a>
 
 ## 14 · How to Evaluate Search Strategies
 
@@ -993,7 +993,7 @@ Big-O 会忽略常数倍，所以我们关心的是随着 $b,d,m$ 增长，memor
 
 ---
 
-<a id="15--breadth-first-search"></a>
+<a name="15--breadth-first-search"></a>
 
 ## 15 · Breadth-First Search
 
@@ -1097,7 +1097,7 @@ $$
 
 ---
 
-<a id="16--depth-first-search"></a>
+<a name="16--depth-first-search"></a>
 
 ## 16 · Depth-First Search
 
@@ -1196,7 +1196,7 @@ DFS = deep and cheap but risky
 
 ---
 
-<a id="18--depth-limited-search"></a>
+<a name="18--depth-limited-search"></a>
 
 ## 18 · Depth-Limited Search
 
@@ -1281,7 +1281,7 @@ Depth-limited search by itself is not the final win. It is the building block fo
 
 ---
 
-<a id="19--iterative-deepening-search"></a>
+<a name="19--iterative-deepening-search"></a>
 
 ## 19 · Iterative Deepening Search
 

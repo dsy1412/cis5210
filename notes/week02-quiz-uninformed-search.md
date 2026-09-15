@@ -63,7 +63,7 @@ quiz asks algorithm properties
 
 ---
 
-<a id="01--search-evaluation-criteria"></a>
+<a name="01--search-evaluation-criteria"></a>
 
 ## 01 · Search Evaluation Criteria
 
@@ -82,7 +82,7 @@ quiz asks algorithm properties
 
 ---
 
-<a id="02--important-symbols-b--d--m--c"></a>
+<a name="02--important-symbols-b--d--m--c"></a>
 
 ## 02 · Important Symbols: `b / d / m / C*`
 
@@ -178,7 +178,7 @@ finite branching factor
 
 如果 `b` 是 infinite，某一层本身可能永远展开不完。
 
-<a id="optimality"></a>
+<a name="optimality"></a>
 
 ### Optimality
 
@@ -205,7 +205,7 @@ BFS 可能先找到 Path A，但 Path B 才是 lower-cost solution。
 
 ---
 
-<a id="05--bfs-time-and-space-complexity"></a>
+<a name="05--bfs-time-and-space-complexity"></a>
 
 ## 05 · BFS Time and Space Complexity
 
@@ -262,7 +262,7 @@ One-paragraph quiz answer:
 
 ---
 
-<a id="06--depth-first-search"></a>
+<a name="06--depth-first-search"></a>
 
 ## 06 · Depth-First Search
 
@@ -299,7 +299,7 @@ Common quiz sentence:
 
 ---
 
-<a id="07--depth-limited-search"></a>
+<a name="07--depth-limited-search"></a>
 
 ## 07 · Depth-Limited Search
 
@@ -331,7 +331,7 @@ Main idea:
 
 ---
 
-<a id="08--iterative-deepening-search"></a>
+<a name="08--iterative-deepening-search"></a>
 
 ## 08 · Iterative Deepening Search
 

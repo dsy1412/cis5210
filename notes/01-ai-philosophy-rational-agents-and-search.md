@@ -137,7 +137,7 @@ $$
 
 ## 02 · Notes
 
-<a id="core-idea"></a>
+<a name="core-idea"></a>
 
 ### Core Idea
 
@@ -210,7 +210,7 @@ Descartes 的区分标准大致是：
 
 This is why language becomes such an important test case for AI.
 
-<a id="turing-test-operationalizing-the-question"></a>
+<a name="turing-test-operationalizing-the-question"></a>
 
 #### Turing Test: Operationalizing the Question
 
@@ -270,7 +270,7 @@ Turing 把这个游戏改成：
 
 这不是证明 machine has a mind（机器有心灵），而是把一个难定义的问题变成可测试的行为问题。
 
-<a id="searles-chinese-room"></a>
+<a name="searles-chinese-room"></a>
 
 #### Searle's Chinese Room
 
@@ -309,7 +309,7 @@ Searle 的结论是：
 | Strong AI（强人工智能） | 机器真的拥有 understanding, mind, cognitive states |
 | Weak AI（弱人工智能） | 机器只是 simulate thought，看起来像理解 |
 
-<a id="eliza-rule-based-conversation"></a>
+<a name="eliza-rule-based-conversation"></a>
 
 #### ELIZA: Rule-Based Conversation
 
@@ -361,7 +361,7 @@ simulating thinking?
 
 > How do we build practical AI programs that work?
 
-<a id="agi-returns-to-the-conversation"></a>
+<a name="agi-returns-to-the-conversation"></a>
 
 #### AGI Returns to the Conversation
 
@@ -554,7 +554,7 @@ Important distinction:
 
 > SciFi often imagines one unified general intelligence; real AI often first succeeds by decomposing that dream into narrow benchmarked tasks.
 
-<a id="agent"></a>
+<a name="agent"></a>
 
 ### Agent
 
@@ -578,12 +578,12 @@ environment
 
 Examples:
 
-| Agent | Sensors | Actuators |
-| --- | --- | --- |
-| human | eyes, ears | hands, legs, mouth |
-| robot | camera, range finder | motors |
+| Agent        | Sensors                        | Actuators                       |
+| ------------ | ------------------------------ | ------------------------------- |
+| human        | eyes, ears                     | hands, legs, mouth              |
+| robot        | camera, range finder           | motors                          |
 | software bot | input streams, files, API data | API calls, messages, file edits |
-| thermostat | temperature sensor | heating / cooling control |
+| thermostat   | temperature sensor             | heating / cooling control       |
 
 ### Percept and Percept Sequence
 
@@ -619,7 +619,7 @@ Meaning:
 
 > Agent function 是“如果看到这段历史，就应该做什么”的抽象描述。
 
-<a id="agent-function-vs-agent-program"></a>
+<a name="agent-function-vs-agent-program"></a>
 
 ### Agent Function vs Agent Program
 
@@ -698,7 +698,7 @@ Better reward:
 
 This connects later to reward design（奖励设计）and specification gaming（指标投机）.
 
-<a id="rationality-is-not-omniscience"></a>
+<a name="rationality-is-not-omniscience"></a>
 
 ### Rationality Is Not Omniscience
 
@@ -754,7 +754,7 @@ chess / Go: cannot exhaustively search all outcomes
 real world: uncertainty + computation limits
 ```
 
-<a id="expected-performance"></a>
+<a name="expected-performance"></a>
 
 ### Expected Performance
 
@@ -799,7 +799,7 @@ Later connection:
 - expectimax: useful when outcomes include chance, such as dice rolls or card draws.
 - expected maximum utility: later formal decision principle.
 
-<a id="task-environment-and-peas"></a>
+<a name="task-environment-and-peas"></a>
 
 ### Task Environment and PEAS
 
@@ -860,7 +860,7 @@ Task
 -> actions
 ```
 
-<a id="environment-dimensions"></a>
+<a name="environment-dimensions"></a>
 
 ### Environment Dimensions
 
@@ -969,7 +969,7 @@ The hardest environments often combine:
 
 Self-driving is hard because the agent cannot fully see the world, the world keeps changing, other people have goals, and action outcomes are uncertain.
 
-<a id="course-simplification-before-search"></a>
+<a name="course-simplification-before-search"></a>
 
 ### Course Simplification Before Search
 

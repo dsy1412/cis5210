@@ -89,7 +89,7 @@ special methods: __init__ __neg__ __add__ __sub__ __mul__ __call__ __str__
 
 ---
 
-<a id="02--python-类型strong--dynamic"></a>
+<a name="02--python-类型strong--dynamic"></a>
 
 ## 02 · Python 类型：strong + dynamic
 
@@ -124,7 +124,7 @@ C / Java 更接近 static；JavaScript 的 `"3" + 4 == "34"` 更接近 weak。�
 
 ---
 
-<a id="03--dict-key-必须可哈希"></a>
+<a name="03--dict-key-必须可哈希"></a>
 
 ## 03 · Dict key 必须可哈希
 
@@ -163,7 +163,7 @@ $$
 
 ---
 
-<a id="04--字符串拼接-vs-join"></a>
+<a name="04--字符串拼接-vs-join"></a>
 
 ## 04 · 字符串拼接：`+=` vs `join`
 
@@ -192,7 +192,7 @@ $$
 
 ---
 
-<a id="05--list-comprehension"></a>
+<a name="05--list-comprehension"></a>
 
 ## 05 · List comprehension
 
@@ -272,7 +272,7 @@ transpose([[1, 2], [3, 4], [5, 6]])    # [[1, 3, 5], [2, 4, 6]]
 
 ---
 
-<a id="06--sequence-slicing"></a>
+<a name="06--sequence-slicing"></a>
 
 ## 06 · Sequence slicing
 
@@ -348,7 +348,7 @@ $$
 
 ---
 
-<a id="07--generators"></a>
+<a name="07--generators"></a>
 
 ## 07 · Generators
 
@@ -494,7 +494,7 @@ to_mixed_case("___")                 # ''
 
 ---
 
-<a id="09--polynomial-类"></a>
+<a name="09--polynomial-类"></a>
 
 ## 09 · Polynomial 类
 
@@ -506,7 +506,7 @@ to_mixed_case("___")                 # ''
 
 顺序按构造时的顺序，不自动化简。可以把它想成「项的序列」，还不是数学上已经合并同类项的多项式。
 
-<a id="不可变内部表示"></a>
+<a name="不可变内部表示"></a>
 
 ### 不可变内部表示
 
@@ -565,7 +565,7 @@ $$
 p(x)=\sum_i c_i x^{k_i}
 $$
 
-<a id="simplify"></a>
+<a name="simplify"></a>
 
 ### `simplify`
 
@@ -638,7 +638,7 @@ $$
 
 ---
 
-<a id="10--numpy-与-nltk"></a>
+<a name="10--numpy-与-nltk"></a>
 
 ## 10 · numpy 与 NLTK
 

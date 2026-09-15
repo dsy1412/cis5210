@@ -82,7 +82,7 @@ Python mechanics
 
 ## 02 · Python Objects and Classes
 
-<a id="class-instance-attribute-method"></a>
+<a name="class-instance-attribute-method"></a>
 
 ### Class, Instance, Attribute, Method
 
@@ -175,7 +175,7 @@ Why?
 
 > `x` and `y` point to the same list object.
 
-<a id="vs-is"></a>
+<a name="vs-is"></a>
 
 ### `==` vs `is`
 
@@ -446,7 +446,7 @@ Comparison:
 
 ---
 
-<a id="06--data-structures-for-graph-search"></a>
+<a name="06--data-structures-for-graph-search"></a>
 
 ## 06 · Data Structures for Graph Search
 
@@ -456,7 +456,7 @@ A graph-search algorithm usually needs:
 2. visited set（已访问集合）
 3. predecessor map（前驱映射）
 
-<a id="frontier-bfs-vs-dfs-vs-best-first"></a>
+<a name="frontier-bfs-vs-dfs-vs-best-first"></a>
 
 ### Frontier: BFS vs DFS vs Best-First
 
@@ -550,7 +550,7 @@ goal -> parent -> parent -> ... -> start
 
 ## 07 · Agent Types
 
-<a id="table-driven-agent"></a>
+<a name="table-driven-agent"></a>
 
 ### Table-Driven Agent
 
@@ -586,7 +586,7 @@ Main problem:
 
 > Table-driven agents do not scale because the table grows very quickly as percept history becomes longer.
 
-<a id="reflex-goal-utility-and-learning-agents"></a>
+<a name="reflex-goal-utility-and-learning-agents"></a>
 
 ### Reflex, Goal, Utility, and Learning Agents
 
@@ -652,7 +652,7 @@ For example:
 
 These may be implementation choices, but they are not the main abstract design steps.
 
-<a id="peas"></a>
+<a name="peas"></a>
 
 ### PEAS
 
@@ -717,7 +717,7 @@ Step 6: Improve the design.
 
 ---
 
-<a id="09--environment-properties"></a>
+<a name="09--environment-properties"></a>
 
 ## 09 · Environment Properties
 
@@ -857,7 +857,7 @@ Reason:
 
 ---
 
-<a id="10--rationality-and-bad-outcomes"></a>
+<a name="10--rationality-and-bad-outcomes"></a>
 
 ## 10 · Rationality and Bad Outcomes
 
@@ -895,7 +895,7 @@ Important idea:
 
 ---
 
-<a id="11--ethics-mortgage-approval-ai"></a>
+<a name="11--ethics-mortgage-approval-ai"></a>
 
 ## 11 · Ethics: Mortgage Approval AI
 

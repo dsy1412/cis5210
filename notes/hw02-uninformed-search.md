@@ -110,7 +110,7 @@ $$
 
 这个 restriction 合理，是因为合法 N-Queens solution 本来就不可能有两只 queen 在同一 row。
 
-<a id="board-representation"></a>
+<a name="board-representation"></a>
 
 ### Board Representation
 
@@ -137,7 +137,7 @@ Partial board 也用同样表示：
 
 表示前 3 行已经放好 queen。
 
-<a id="validity-check"></a>
+<a name="validity-check"></a>
 
 ### Validity Check
 
@@ -163,7 +163,7 @@ seen_diag_up
 
 如果新 queen 的 column 或 diagonal 已出现，就 invalid。
 
-<a id="dfs--backtracking"></a>
+<a name="dfs--backtracking"></a>
 
 ### DFS / Backtracking
 
@@ -183,7 +183,7 @@ when length == n, yield complete solution
 
 ## 03 · Lights Out
 
-<a id="state-representation"></a>
+<a name="state-representation"></a>
 
 ### State Representation
 
@@ -207,7 +207,7 @@ mutable list -> not hashable
 immutable tuple -> hashable if elements are hashable
 ```
 
-<a id="move--transition"></a>
+<a name="move--transition"></a>
 
 ### Move / Transition
 
@@ -234,7 +234,7 @@ for every row, col:
 
 必须用 copy，不能直接改当前 puzzle，否则 successor generation 会污染原状态。
 
-<a id="bfs-solver"></a>
+<a name="bfs-solver"></a>
 
 ### BFS Solver
 
@@ -260,7 +260,7 @@ BFS 为什么能返回 optimal solution？
 
 ---
 
-<a id="04--linear-disk-movement"></a>
+<a name="04--linear-disk-movement"></a>
 
 ## 04 · Linear Disk Movement
 
@@ -320,7 +320,7 @@ goal:  (-1, -1, 2, 1, 0)
 
 目标顺序是 reversed，因为第一个 disk 要去最右边，第二个去倒数第二个，以此类推。
 
-<a id="disk-successors"></a>
+<a name="disk-successors"></a>
 
 ### Disk Successors
 
@@ -342,7 +342,7 @@ goal:  (-1, -1, 2, 1, 0)
 ((from, to), next_state)
 ```
 
-<a id="why-bfs"></a>
+<a name="why-bfs"></a>
 
 ### Why BFS
 
@@ -352,7 +352,7 @@ goal:  (-1, -1, 2, 1, 0)
 
 ---
 
-<a id="05--common-mistakes"></a>
+<a name="05--common-mistakes"></a>
 
 ## 05 · Common Mistakes
 
