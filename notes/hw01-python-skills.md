@@ -40,6 +40,19 @@ Python object model
 
 > HW1 is Python fluency for future AI code: represent data cleanly, avoid aliasing mistakes, and make objects behave predictably.
 
+### Jump to Core Sections
+
+- [Homework constraints](#01--作业约束)
+- [Python strong + dynamic typing](#02--python-类型strong--dynamic)
+- [Dict keys and hashability](#03--dict-key-必须可哈希)
+- [String concatenation and join](#04--字符串拼接-vs-join)
+- [List comprehension](#05--list-comprehension)
+- [Sequence slicing](#06--sequence-slicing)
+- [Generators](#07--generators)
+- [Text processing](#08--文本处理)
+- [Polynomial class](#09--polynomial-类)
+- [numpy and NLTK](#10--numpy-与-nltk)
+
 ### Professional Terms
 
 | Term | 中文 | Quick Meaning |

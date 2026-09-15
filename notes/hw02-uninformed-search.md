@@ -49,6 +49,16 @@ formulate puzzle as search
 
 > HW2 is where search becomes code: correctness mostly depends on clean states and exact successor generation.
 
+### Jump to Core Sections
+
+- [Homework structure](#01--作业结构)
+- [N-Queens](#02--n-queens)
+- [Lights Out](#03--lights-out)
+- [Linear Disk Movement](#04--linear-disk-movement)
+- [Common mistakes](#05--common-mistakes)
+- [Complexity intuition](#06--complexity-intuition)
+- [Self-check](#07--self-check)
+
 ### Professional Terms
 
 | Term | 中文 | Quick Meaning |

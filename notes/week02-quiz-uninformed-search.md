@@ -42,6 +42,18 @@ quiz asks algorithm properties
 
 > For uninformed search, the data structure behind the frontier almost entirely determines the algorithm's behavior.
 
+### Jump to Core Sections
+
+- [Search evaluation criteria](#01--search-evaluation-criteria)
+- [Important symbols: b, d, m, C*](#02--important-symbols-b--d--m--c)
+- [State space and frontier](#03--state-space-and-frontier)
+- [Breadth-first search](#04--breadth-first-search)
+- [BFS time and space complexity](#05--bfs-time-and-space-complexity)
+- [Depth-first search](#06--depth-first-search)
+- [Depth-limited search](#07--depth-limited-search)
+- [Iterative deepening search](#08--iterative-deepening-search)
+- [BFS / DFS / IDS space comparison](#09--bfs--dfs--ids-space-comparison)
+
 ### Professional Terms
 
 | Term | 中文 | Quick Meaning |

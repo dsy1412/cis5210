@@ -37,6 +37,19 @@ rational agent needs planning
 
 > Search is not "finding a fact"; it is finding an action sequence from an initial state to a goal state.
 
+### Jump to Core Sections
+
+- [Reflex agent vs problem-solving agent](#reflex-agent-vs-problem-solving-agent)
+- [Formal definition of a search problem](#04--formal-definition-of-a-search-problem)
+- [State space, path, and frontier](#09--search-fundamentals)
+- [State vs node](#10--state-vs-node)
+- [Tree search vs graph search](#12--repeated-states-and-graph-search)
+- [Breadth-first search](#15--breadth-first-search)
+- [Depth-first search](#16--depth-first-search)
+- [Depth-limited search](#18--depth-limited-search)
+- [Iterative deepening search](#19--iterative-deepening-search)
+- [Common confusions](#23--common-confusions)
+
 ### Professional Terms
 
 | Term | 中文 | Quick Meaning |

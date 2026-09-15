@@ -36,6 +36,19 @@ Python objects and data structures
 
 > This note connects Python mechanics to AI design: data representation choices become agent behavior choices.
 
+### Jump to Core Sections
+
+- [Python objects and classes](#02--python-objects-and-classes)
+- [Python sequences and strings](#03--python-sequences-and-strings)
+- [Dictionaries and hashability](#04--dictionaries-hashability-and-counting)
+- [Data structures for graph search](#06--data-structures-for-graph-search)
+- [Agent types](#07--agent-types)
+- [Rational agent design process](#08--rational-agent-design-process)
+- [Environment properties](#09--environment-properties)
+- [Rationality and bad outcomes](#10--rationality-and-bad-outcomes)
+- [Ethics: mortgage approval AI](#11--ethics-mortgage-approval-ai)
+- [Quiz review](#13--quiz-review)
+
 ### Professional Terms
 
 | Term | 中文 | Quick Meaning |

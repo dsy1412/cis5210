@@ -40,6 +40,20 @@ different edge costs
 
 > Greedy asks "which node looks closest now?"; A* asks "which complete path looks cheapest if this estimate is trustworthy?"
 
+### Jump to Core Sections
+
+- [Key symbols: g, h, f, h*](#key-symbols)
+- [Uniform Cost Search](#03--uniform-cost-search)
+- [Heuristic functions](#05--heuristic-functions)
+- [Greedy best-first search](#06--greedy-best-first-search)
+- [A* search](#07--a-search)
+- [Admissible heuristics](#08--admissible-heuristics)
+- [A* on Romania](#09--a-on-romania)
+- [A* optimality sketch](#10--sketch-why-a-tree-search-is-optimal)
+- [8-puzzle heuristics](#11--heuristics-for-the-8-puzzle)
+- [Relaxed problems](#12--relaxed-problems)
+- [Dominance](#13--dominance)
+
 ### Professional Terms
 
 | Term | 中文 | Quick Meaning |

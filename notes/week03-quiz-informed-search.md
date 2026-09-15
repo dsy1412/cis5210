@@ -49,6 +49,19 @@ estimate remaining cost
 
 > A* is UCS plus a safe estimate of the remaining cost.
 
+### Jump to Core Sections
+
+- [Heuristic function](#01--heuristic-function)
+- [Greedy best-first search](#02--greedy-best-first-search)
+- [A* search](#03--a-search)
+- [g(n) as actual cost so far](#04--gn-is-actual-cost-so-far)
+- [Greedy vs A*](#05--greedy-vs-a)
+- [Admissible heuristic](#06--admissible-heuristic)
+- [Consistent heuristic](#07--consistent-heuristic)
+- [Dominant heuristic](#10--dominant-heuristic)
+- [Relaxed problem](#11--relaxed-problem)
+- [Manhattan distance for 8-puzzle](#12--manhattan-distance-for-the-8-puzzle)
+
 ### Professional Terms
 
 | Term | 中文 | Quick Meaning |

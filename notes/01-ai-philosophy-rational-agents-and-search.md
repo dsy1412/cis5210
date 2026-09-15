@@ -38,59 +38,72 @@ Can machines think?
 -> simplified task environments lead naturally to search problems
 ```
 
+### Jump to Core Sections
+
+- [AI definitions and course framing](#core-idea)
+- [Turing Test](#turing-test-operationalizing-the-question)
+- [Chinese Room](#searles-chinese-room)
+- [ELIZA](#eliza-rule-based-conversation)
+- [AGI and modern LLMs](#agi-returns-to-the-conversation)
+- [Agent basics](#agent)
+- [Rationality](#rationality)
+- [PEAS](#task-environment-and-peas)
+- [Environment dimensions](#environment-dimensions)
+- [Search problem example](#search-problem-8-puzzle)
+
 ### Professional Terms
 
-| Term | 中文 | Quick Meaning |
-| --- | --- | --- |
-| Artificial Intelligence (AI) | 人工智能 | Study of systems that reason, act, or perform tasks associated with intelligence. |
-| Thinking Humanly | 像人一样思考 | Model how humans actually think. |
-| Acting Humanly | 像人一样行动 | Behave in a way that appears human, such as passing a Turing Test. |
-| Thinking Rationally | 理性地思考 | Follow formal rules of correct reasoning. |
-| Acting Rationally | 理性地行动 | Choose actions that maximize expected performance. |
-| Consciousness | 意识 | Subjective experience; this course does not try to prove machines have it. |
-| Mind / Body Dualism | 心身二元论 | Descartes' distinction between physical body and thinking mind. |
-| Automaton | 自动机械 | A machine that behaves in a preset mechanical way. |
-| Turing Test | 图灵测试 | Behavioral test: can a machine imitate human conversation well enough? |
-| Operationalize | 操作化 | Turn a vague question into something testable. |
-| Chinese Room | 中文房间 | Searle's thought experiment against “symbol manipulation = understanding.” |
-| Syntax | 句法 / 符号规则 | Manipulating symbols according to rules. |
-| Semantics | 语义 / 意义 | Understanding what symbols mean. |
-| Strong AI | 强人工智能 | Claim that a machine could truly understand or have mental states. |
-| Weak AI | 弱人工智能 | Claim that a machine can simulate intelligent behavior without real understanding. |
-| ELIZA | 早期对话程序 | Rule-based chatbot that seemed conversational without semantic understanding. |
-| Brain in a Vat | 缸中之脑 | Thought experiment about simulated experience and reality. |
-| AGI | 通用人工智能 | AI with broad, general reasoning ability across tasks. |
-| Theory of Mind | 心智理论 | Ability to model what another person knows, believes, or perceives. |
-| Agent | 智能体 | Something that perceives an environment and acts in it. |
-| Sensor | 传感器 | Mechanism for receiving percepts from the environment. |
-| Actuator | 执行器 | Mechanism for taking actions in the environment. |
-| Percept | 感知输入 | What the agent receives at one moment. |
-| Percept Sequence | 感知序列 | Full history of percepts received so far. |
-| Agent Function | 智能体函数 | Abstract mapping from percept sequence to action. |
-| Agent Program | 智能体程序 | Concrete implementation running on hardware. |
-| Table-Driven Agent | 查表智能体 | Stores percept histories and actions explicitly; does not scale. |
-| Rationality | 理性 | Choosing the best action given available information and goals. |
-| Omniscience | 全知 | Knowing actual future outcomes; rationality does not require this. |
-| Bounded Rationality | 有限理性 | Rational choice under limited information and computation. |
-| Performance Measure | 性能指标 | Criterion used to evaluate how well the agent is doing. |
-| Expected Performance | 期望表现 | Average / probabilistic performance given uncertainty. |
-| PEAS | 任务环境描述框架 | Performance, Environment, Actuators, Sensors. |
-| Task Environment | 任务环境 | The problem setting the agent is designed to operate in. |
-| Fully Observable | 完全可观测 | Agent can detect all relevant aspects of the environment. |
-| Partially Observable | 部分可观测 | Agent lacks some relevant information. |
-| Deterministic | 确定性 | Action outcome is fixed by current state and action. |
-| Stochastic | 随机性 | Action outcome involves probabilities. |
-| Episodic | 回合独立 | Each decision is mostly independent. |
-| Sequential | 序列性 | Current actions affect future decisions. |
-| Static | 静态 | Environment does not change while agent deliberates. |
-| Dynamic | 动态 | Environment changes while agent is deciding. |
-| Discrete | 离散 | States/actions/time are countable or separate. |
-| Continuous | 连续 | States/actions/time vary smoothly. |
-| Single-Agent | 单智能体 | Only one decision-making agent matters. |
-| Multi-Agent | 多智能体 | Other agents also optimize their own goals. |
-| Reflex Agent | 反射型智能体 | Acts from current percept without planning. |
-| Problem-Solving Agent | 问题求解智能体 | Plans action sequences to reach goals. |
-| Search Problem | 搜索问题 | Find a sequence of actions from initial state to goal state. |
+| Term                         | 中文        | Quick Meaning                                                                      |
+| ---------------------------- | --------- | ---------------------------------------------------------------------------------- |
+| Artificial Intelligence (AI) | 人工智能      | Study of systems that reason, act, or perform tasks associated with intelligence.  |
+| Thinking Humanly             | 像人一样思考    | Model how humans actually think.                                                   |
+| Acting Humanly               | 像人一样行动    | Behave in a way that appears human, such as passing a Turing Test.                 |
+| Thinking Rationally          | 理性地思考     | Follow formal rules of correct reasoning.                                          |
+| Acting Rationally            | 理性地行动     | Choose actions that maximize expected performance.                                 |
+| Consciousness                | 意识        | Subjective experience; this course does not try to prove machines have it.         |
+| Mind / Body Dualism          | 心身二元论     | Descartes' distinction between physical body and thinking mind.                    |
+| Automaton                    | 自动机械      | A machine that behaves in a preset mechanical way.                                 |
+| Turing Test                  | 图灵测试      | Behavioral test: can a machine imitate human conversation well enough?             |
+| Operationalize               | 操作化       | Turn a vague question into something testable.                                     |
+| Chinese Room                 | 中文房间      | Searle's thought experiment against “symbol manipulation = understanding.”         |
+| Syntax                       | 句法 / 符号规则 | Manipulating symbols according to rules.                                           |
+| Semantics                    | 语义 / 意义   | Understanding what symbols mean.                                                   |
+| Strong AI                    | 强人工智能     | Claim that a machine could truly understand or have mental states.                 |
+| Weak AI                      | 弱人工智能     | Claim that a machine can simulate intelligent behavior without real understanding. |
+| ELIZA                        | 早期对话程序    | Rule-based chatbot that seemed conversational without semantic understanding.      |
+| Brain in a Vat               | 缸中之脑      | Thought experiment about simulated experience and reality.                         |
+| AGI                          | 通用人工智能    | AI with broad, general reasoning ability across tasks.                             |
+| Theory of Mind               | 心智理论      | Ability to model what another person knows, believes, or perceives.                |
+| Agent                        | 智能体       | Something that perceives an environment and acts in it.                            |
+| Sensor                       | 传感器       | Mechanism for receiving percepts from the environment.                             |
+| Actuator                     | 执行器       | Mechanism for taking actions in the environment.                                   |
+| Percept                      | 感知输入      | What the agent receives at one moment.                                             |
+| Percept Sequence             | 感知序列      | Full history of percepts received so far.                                          |
+| Agent Function               | 智能体函数     | Abstract mapping from percept sequence to action.                                  |
+| Agent Program                | 智能体程序     | Concrete implementation running on hardware.                                       |
+| Table-Driven Agent           | 查表智能体     | Stores percept histories and actions explicitly; does not scale.                   |
+| Rationality                  | 理性        | Choosing the best action given available information and goals.                    |
+| Omniscience                  | 全知        | Knowing actual future outcomes; rationality does not require this.                 |
+| Bounded Rationality          | 有限理性      | Rational choice under limited information and computation.                         |
+| Performance Measure          | 性能指标      | Criterion used to evaluate how well the agent is doing.                            |
+| Expected Performance         | 期望表现      | Average / probabilistic performance given uncertainty.                             |
+| PEAS                         | 任务环境描述框架  | Performance, Environment, Actuators, Sensors.                                      |
+| Task Environment             | 任务环境      | The problem setting the agent is designed to operate in.                           |
+| Fully Observable             | 完全可观测     | Agent can detect all relevant aspects of the environment.                          |
+| Partially Observable         | 部分可观测     | Agent lacks some relevant information.                                             |
+| Deterministic                | 确定性       | Action outcome is fixed by current state and action.                               |
+| Stochastic                   | 随机性       | Action outcome involves probabilities.                                             |
+| Episodic                     | 回合独立      | Each decision is mostly independent.                                               |
+| Sequential                   | 序列性       | Current actions affect future decisions.                                           |
+| Static                       | 静态        | Environment does not change while agent deliberates.                               |
+| Dynamic                      | 动态        | Environment changes while agent is deciding.                                       |
+| Discrete                     | 离散        | States/actions/time are countable or separate.                                     |
+| Continuous                   | 连续        | States/actions/time vary smoothly.                                                 |
+| Single-Agent                 | 单智能体      | Only one decision-making agent matters.                                            |
+| Multi-Agent                  | 多智能体      | Other agents also optimize their own goals.                                        |
+| Reflex Agent                 | 反射型智能体    | Acts from current percept without planning.                                        |
+| Problem-Solving Agent        | 问题求解智能体   | Plans action sequences to reach goals.                                             |
+| Search Problem               | 搜索问题      | Find a sequence of actions from initial state to goal state.                       |
 
 ## 01 · Before
 
