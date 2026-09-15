@@ -10,16 +10,16 @@ This note treats the attached course materials as source material only. It recor
 
 ### Read With These Questions
 
-1. 什么情况下 reflex agent 不够，需要 problem-solving agent？[答案](#reflex-agent-vs-problem-solving-agent)
-2. A search problem 的五个核心成分是什么？[答案](#04--formal-definition-of-a-search-problem)
-3. state 和 node 的区别是什么？为什么同一个 state 可以出现在多个 node 里？[答案](#10--state-vs-node)
-4. frontier 存的是什么？explored set / visited set 存的是什么？[答案](#frontier)
-5. tree search 为什么会重复走回头路？graph search 用什么避免 repeated states？[答案](#12--repeated-states-and-graph-search)
-6. BFS 为什么 complete？它的 optimality 需要什么假设？[答案](#15--breadth-first-search)
-7. DFS 为什么省 memory？它为什么可能不 complete / not optimal？[答案](#16--depth-first-search)
-8. Depth-limited search 的 limit `l` 小于、等于、大于 `d` 时分别会发生什么？[答案](#18--depth-limited-search)
-9. Iterative deepening search 为什么重复展开浅层节点，但时间复杂度仍然是 `O(b^d)`？[答案](#19--iterative-deepening-search)
-10. `b`、`d`、`m` 分别控制哪类复杂度？为什么不能混在一起？[答案](#14--how-to-evaluate-search-strategies)
+1. 什么情况下 reflex agent 不够，需要 problem-solving agent？ [[#Reflex Agent vs Problem-Solving Agent|答案]]
+2. A search problem 的五个核心成分是什么？ [[#04 · Formal Definition of a Search Problem|答案]]
+3. state 和 node 的区别是什么？为什么同一个 state 可以出现在多个 node 里？ [[#10 · State vs Node|答案]]
+4. frontier 存的是什么？explored set / visited set 存的是什么？ [[#Frontier|答案]]
+5. tree search 为什么会重复走回头路？graph search 用什么避免 repeated states？ [[#12 · Repeated States and Graph Search|答案]]
+6. BFS 为什么 complete？它的 optimality 需要什么假设？ [[#15 · Breadth-First Search|答案]]
+7. DFS 为什么省 memory？它为什么可能不 complete / not optimal？ [[#16 · Depth-First Search|答案]]
+8. Depth-limited search 的 limit `l` 小于、等于、大于 `d` 时分别会发生什么？ [[#18 · Depth-Limited Search|答案]]
+9. Iterative deepening search 为什么重复展开浅层节点，但时间复杂度仍然是 `O(b^d)`？ [[#19 · Iterative Deepening Search|答案]]
+10. `b`、`d`、`m` 分别控制哪类复杂度？为什么不能混在一起？ [[#14 · How to Evaluate Search Strategies|答案]]
 
 ### One-Minute Map
 
@@ -119,8 +119,6 @@ Module 1 说 rational agent 要根据 percept sequence 选择 expected performan
 ---
 
 ## 02 · Notes
-
-<a name="reflex-agent-vs-problem-solving-agent"></a>
 
 ### Reflex Agent vs Problem-Solving Agent
 
@@ -238,8 +236,6 @@ $$
 这样做不是因为真实世界都这么简单，而是因为要先把 search 的数学骨架学清楚。
 
 ---
-
-<a name="04--formal-definition-of-a-search-problem"></a>
 
 ## 04 · Formal Definition of a Search Problem
 
@@ -697,8 +693,6 @@ s0 -> s1 -> s2 -> goal
 a0, a1, a2, ...
 ```
 
-<a name="frontier"></a>
-
 ### Frontier
 
 Frontier（边界 / 待展开集合）是：
@@ -738,8 +732,6 @@ Solution 是从 initial state 到 goal state 的 path。
 Optimal solution 是没有其他 solution 有更低 path cost。
 
 ---
-
-<a name="10--state-vs-node"></a>
 
 ## 10 · State vs Node
 
@@ -824,8 +816,6 @@ different parent path
 这就是为什么 slide 上可以画出一棵 tree，即使原始问题本质上是 graph。
 
 ---
-
-<a name="12--repeated-states-and-graph-search"></a>
 
 ## 12 · Repeated States and Graph Search
 
@@ -950,8 +940,6 @@ because heuristic information says they look more promising
 
 ---
 
-<a name="14--how-to-evaluate-search-strategies"></a>
-
 ## 14 · How to Evaluate Search Strategies
 
 一个 search strategy 通常从四个维度评价：
@@ -992,8 +980,6 @@ Big-O 会忽略常数倍，所以我们关心的是随着 $b,d,m$ 增长，memor
 对 search 来说，space 往往非常关键，因为 frontier、explored set、parent pointers 都要占内存。
 
 ---
-
-<a name="15--breadth-first-search"></a>
 
 ## 15 · Breadth-First Search
 
@@ -1097,8 +1083,6 @@ $$
 
 ---
 
-<a name="16--depth-first-search"></a>
-
 ## 16 · Depth-First Search
 
 DFS expands the deepest unexpanded node first.
@@ -1196,8 +1180,6 @@ DFS = deep and cheap but risky
 
 ---
 
-<a name="18--depth-limited-search"></a>
-
 ## 18 · Depth-Limited Search
 
 Depth-limited search 是 DFS with a depth limit $l$。
@@ -1280,8 +1262,6 @@ Complexity:
 Depth-limited search by itself is not the final win. It is the building block for iterative deepening.
 
 ---
-
-<a name="19--iterative-deepening-search"></a>
 
 ## 19 · Iterative Deepening Search
 

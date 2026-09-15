@@ -14,16 +14,16 @@ Source: CIS5210 Homework 1 (Python Skills, 105 points) and the submitted `homewo
 
 ### Read With These Questions
 
-1. Python 为什么是 strongly typed 但 dynamically typed？[答案](#02--python-类型strong--dynamic)
-2. 哪些对象可以当 dict key？为什么 list 不行、tuple 通常可以？[答案](#03--dict-key-必须可哈希)
-3. slicing 会不会复制？什么时候是 shallow copy？[答案](#06--sequence-slicing)
-4. list comprehension 的 `for` 和 `if` 顺序怎么读？[答案](#05--list-comprehension)
-5. generator 和 list 的区别是什么？`yield` 什么时候真正执行？[答案](#07--generators)
-6. 字符串为什么用 `join` 比反复 `+=` 更合适？[答案](#04--字符串拼接-vs-join)
-7. `Polynomial` 的内部表示为什么要保持不可变或不被外部 alias 修改？[答案](#不可变内部表示)
-8. `__add__`、`__mul__`、`__call__`、`__str__` 分别让对象像什么一样工作？[答案](#09--polynomial-类)
-9. `simplify` 应该处理哪些边界：零系数、同次项、空 polynomial、符号显示？[答案](#simplify)
-10. numpy / NLTK 题目在考 library call，还是在考输入输出 shape？[答案](#10--numpy-与-nltk)
+1. Python 为什么是 strongly typed 但 dynamically typed？ [[#02 · Python 类型：strong + dynamic|答案]]
+2. 哪些对象可以当 dict key？为什么 list 不行、tuple 通常可以？ [[#03 · Dict key 必须可哈希|答案]]
+3. slicing 会不会复制？什么时候是 shallow copy？ [[#06 · Sequence slicing|答案]]
+4. list comprehension 的 `for` 和 `if` 顺序怎么读？ [[#05 · List comprehension|答案]]
+5. generator 和 list 的区别是什么？`yield` 什么时候真正执行？ [[#07 · Generators|答案]]
+6. 字符串为什么用 `join` 比反复 `+=` 更合适？ [[#04 · 字符串拼接：+= vs join|答案]]
+7. `Polynomial` 的内部表示为什么要保持不可变或不被外部 alias 修改？ [[#不可变内部表示|答案]]
+8. `__add__`、`__mul__`、`__call__`、`__str__` 分别让对象像什么一样工作？ [[#09 · Polynomial 类|答案]]
+9. `simplify` 应该处理哪些边界：零系数、同次项、空 polynomial、符号显示？ [[#simplify|答案]]
+10. numpy / NLTK 题目在考 library call，还是在考输入输出 shape？ [[#10 · numpy 与 NLTK|答案]]
 
 ### One-Minute Map
 
@@ -89,8 +89,6 @@ special methods: __init__ __neg__ __add__ __sub__ __mul__ __call__ __str__
 
 ---
 
-<a name="02--python-类型strong--dynamic"></a>
-
 ## 02 · Python 类型：strong + dynamic
 
 Python 同时是：
@@ -123,8 +121,6 @@ $$
 C / Java 更接近 static；JavaScript 的 `"3" + 4 == "34"` 更接近 weak。后面 search 里把 state 写成 tuple 还是 list，本质也是在选对象的类型与可变性，而不是在选变量名的类型。
 
 ---
-
-<a name="03--dict-key-必须可哈希"></a>
 
 ## 03 · Dict key 必须可哈希
 
@@ -163,9 +159,7 @@ $$
 
 ---
 
-<a name="04--字符串拼接-vs-join"></a>
-
-## 04 · 字符串拼接：`+=` vs `join`
+## 04 · 字符串拼接：+= vs join
 
 ```python
 def concatenate1(strings):
@@ -191,8 +185,6 @@ $$
 作业后半的 `normalize`、`no_vowels`、`digits_to_words`、`Polynomial.__str__` 都走同一条路：先收集片段，最后 `join`。
 
 ---
-
-<a name="05--list-comprehension"></a>
 
 ## 05 · List comprehension
 
@@ -272,8 +264,6 @@ transpose([[1, 2], [3, 4], [5, 6]])    # [[1, 3, 5], [2, 4, 6]]
 
 ---
 
-<a name="06--sequence-slicing"></a>
-
 ## 06 · Sequence slicing
 
 通用形式：
@@ -347,8 +337,6 @@ $$
 $$
 
 ---
-
-<a name="07--generators"></a>
 
 ## 07 · Generators
 
@@ -494,8 +482,6 @@ to_mixed_case("___")                 # ''
 
 ---
 
-<a name="09--polynomial-类"></a>
-
 ## 09 · Polynomial 类
 
 这是作业的主菜。内部表示是 **coefficient-power 对的 tuple**，例如 $2x+1$ 存成：
@@ -505,8 +491,6 @@ to_mixed_case("___")                 # ''
 ```
 
 顺序按构造时的顺序，不自动化简。可以把它想成「项的序列」，还不是数学上已经合并同类项的多项式。
-
-<a name="不可变内部表示"></a>
 
 ### 不可变内部表示
 
@@ -565,9 +549,7 @@ $$
 p(x)=\sum_i c_i x^{k_i}
 $$
 
-<a name="simplify"></a>
-
-### `simplify`
+### simplify
 
 三步，最后一步是原地写回：
 
@@ -637,8 +619,6 @@ $$
 $$
 
 ---
-
-<a name="10--numpy-与-nltk"></a>
 
 ## 10 · numpy 与 NLTK
 

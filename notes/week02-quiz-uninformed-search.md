@@ -18,14 +18,14 @@ search strategy
 
 ### Read With These Questions
 
-1. completeness 和 optimality 的区别是什么？[答案](#01--search-evaluation-criteria)
-2. `b`、`d`、`m`、`C*` 各自是什么意思？[答案](#02--important-symbols-b--d--m--c)
-3. 为什么 BFS 的 time 和 space 都是 `O(b^d)`？[答案](#05--bfs-time-and-space-complexity)
-4. 为什么 BFS 不主要依赖 maximum depth `m`？[答案](#05--bfs-time-and-space-complexity)
-5. DFS 的 time 可能看 `m`，但 space 为什么只需要线性级别？[答案](#06--depth-first-search)
-6. DLS 的 limit `l` 太小会导致什么问题？[答案](#07--depth-limited-search)
-7. IDS 为什么结合了 BFS 的 completeness / optimality 和 DFS 的 low space？[答案](#08--iterative-deepening-search)
-8. 当 step cost 不都相等时，BFS 的 optimality 为什么不成立？[答案](#optimality)
+1. completeness 和 optimality 的区别是什么？ [[#01 · Search Evaluation Criteria|答案]]
+2. `b`、`d`、`m`、`C*` 各自是什么意思？ [[#02 · Important Symbols - b / d / m / C*|答案]]
+3. 为什么 BFS 的 time 和 space 都是 `O(b^d)`？ [[#05 · BFS Time and Space Complexity|答案]]
+4. 为什么 BFS 不主要依赖 maximum depth `m`？ [[#05 · BFS Time and Space Complexity|答案]]
+5. DFS 的 time 可能看 `m`，但 space 为什么只需要线性级别？ [[#06 · Depth-First Search|答案]]
+6. DLS 的 limit `l` 太小会导致什么问题？ [[#07 · Depth-Limited Search|答案]]
+7. IDS 为什么结合了 BFS 的 completeness / optimality 和 DFS 的 low space？ [[#08 · Iterative Deepening Search|答案]]
+8. 当 step cost 不都相等时，BFS 的 optimality 为什么不成立？ [[#Optimality|答案]]
 
 ### One-Minute Map
 
@@ -63,8 +63,6 @@ quiz asks algorithm properties
 
 ---
 
-<a name="01--search-evaluation-criteria"></a>
-
 ## 01 · Search Evaluation Criteria
 
 评价一个 search strategy，通常看四件事：
@@ -82,9 +80,7 @@ quiz asks algorithm properties
 
 ---
 
-<a name="02--important-symbols-b--d--m--c"></a>
-
-## 02 · Important Symbols: `b / d / m / C*`
+## 02 · Important Symbols - b / d / m / C*
 
 | Symbol | Meaning | Quiz wording |
 | --- | --- | --- |
@@ -178,8 +174,6 @@ finite branching factor
 
 如果 `b` 是 infinite，某一层本身可能永远展开不完。
 
-<a name="optimality"></a>
-
 ### Optimality
 
 BFS is optimal if every action has the same cost.
@@ -204,8 +198,6 @@ Path B: 3 steps, cost 3
 BFS 可能先找到 Path A，但 Path B 才是 lower-cost solution。
 
 ---
-
-<a name="05--bfs-time-and-space-complexity"></a>
 
 ## 05 · BFS Time and Space Complexity
 
@@ -262,8 +254,6 @@ One-paragraph quiz answer:
 
 ---
 
-<a name="06--depth-first-search"></a>
-
 ## 06 · Depth-First Search
 
 ### Core Idea
@@ -299,8 +289,6 @@ Common quiz sentence:
 
 ---
 
-<a name="07--depth-limited-search"></a>
-
 ## 07 · Depth-Limited Search
 
 Depth-limited search is DFS with a fixed depth limit `l`.
@@ -330,8 +318,6 @@ Main idea:
 > DLS fixes DFS's infinite-depth problem only if the limit is chosen well.
 
 ---
-
-<a name="08--iterative-deepening-search"></a>
 
 ## 08 · Iterative Deepening Search
 

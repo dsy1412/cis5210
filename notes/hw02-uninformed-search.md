@@ -23,16 +23,16 @@ problem formulation
 
 ### Read With These Questions
 
-1. N-Queens 为什么可以用 row-by-row representation，而不是存整个棋盘？[答案](#board-representation)
-2. diagonal constraint 怎么用 row difference 和 column difference 判断？[答案](#validity-check)
-3. DFS / backtracking 在 N-Queens 中什么时候 append partial board，什么时候回退？[答案](#dfs--backtracking)
-4. Lights Out 的 state 为什么最好转成 hashable representation 再放进 visited set？[答案](#state-representation)
-5. toggle 一个 cell 时，哪些 neighbor 会变化？边界如何处理？[答案](#move--transition)
-6. BFS solver 里 frontier 存的是 state 还是 path？如何返回 move sequence？[答案](#bfs-solver)
-7. identical disks 和 distinct disks 的 goal test 有什么不同？[答案](#04--linear-disk-movement)
-8. disk movement 里 slide move 和 jump move 的合法条件是什么？[答案](#disk-successors)
-9. 为什么这些 puzzle solver 用 BFS 能保证 shortest move sequence？[答案](#why-bfs)
-10. state representation 选错会造成哪些 bug：重复 state、mutating visited、path 丢失？[答案](#05--common-mistakes)
+1. N-Queens 为什么可以用 row-by-row representation，而不是存整个棋盘？ [[#Board Representation|答案]]
+2. diagonal constraint 怎么用 row difference 和 column difference 判断？ [[#Validity Check|答案]]
+3. DFS / backtracking 在 N-Queens 中什么时候 append partial board，什么时候回退？ [[#DFS / Backtracking|答案]]
+4. Lights Out 的 state 为什么最好转成 hashable representation 再放进 visited set？ [[#State Representation|答案]]
+5. toggle 一个 cell 时，哪些 neighbor 会变化？边界如何处理？ [[#Move / Transition|答案]]
+6. BFS solver 里 frontier 存的是 state 还是 path？如何返回 move sequence？ [[#BFS Solver|答案]]
+7. identical disks 和 distinct disks 的 goal test 有什么不同？ [[#04 · Linear Disk Movement|答案]]
+8. disk movement 里 slide move 和 jump move 的合法条件是什么？ [[#Disk Successors|答案]]
+9. 为什么这些 puzzle solver 用 BFS 能保证 shortest move sequence？ [[#Why BFS|答案]]
+10. state representation 选错会造成哪些 bug：重复 state、mutating visited、path 丢失？ [[#05 · Common Mistakes|答案]]
 
 ### One-Minute Map
 
@@ -110,8 +110,6 @@ $$
 
 这个 restriction 合理，是因为合法 N-Queens solution 本来就不可能有两只 queen 在同一 row。
 
-<a name="board-representation"></a>
-
 ### Board Representation
 
 作业用 list 表示 board：
@@ -137,8 +135,6 @@ Partial board 也用同样表示：
 
 表示前 3 行已经放好 queen。
 
-<a name="validity-check"></a>
-
 ### Validity Check
 
 两只 queen 会互相攻击，如果：
@@ -163,8 +159,6 @@ seen_diag_up
 
 如果新 queen 的 column 或 diagonal 已出现，就 invalid。
 
-<a name="dfs--backtracking"></a>
-
 ### DFS / Backtracking
 
 搜索方式：
@@ -182,8 +176,6 @@ when length == n, yield complete solution
 ---
 
 ## 03 · Lights Out
-
-<a name="state-representation"></a>
 
 ### State Representation
 
@@ -206,8 +198,6 @@ tuple(tuple(row) for row in board)
 mutable list -> not hashable
 immutable tuple -> hashable if elements are hashable
 ```
-
-<a name="move--transition"></a>
 
 ### Move / Transition
 
@@ -234,8 +224,6 @@ for every row, col:
 
 必须用 copy，不能直接改当前 puzzle，否则 successor generation 会污染原状态。
 
-<a name="bfs-solver"></a>
-
 ### BFS Solver
 
 `find_solution` 用 BFS graph search：
@@ -259,8 +247,6 @@ BFS 为什么能返回 optimal solution？
 如果 board 不可解，frontier 最后会空，返回 `None`。
 
 ---
-
-<a name="04--linear-disk-movement"></a>
 
 ## 04 · Linear Disk Movement
 
@@ -320,8 +306,6 @@ goal:  (-1, -1, 2, 1, 0)
 
 目标顺序是 reversed，因为第一个 disk 要去最右边，第二个去倒数第二个，以此类推。
 
-<a name="disk-successors"></a>
-
 ### Disk Successors
 
 对每个 disk，尝试 4 种 step：
@@ -342,8 +326,6 @@ goal:  (-1, -1, 2, 1, 0)
 ((from, to), next_state)
 ```
 
-<a name="why-bfs"></a>
-
 ### Why BFS
 
 题目要求 optimal solution，也就是最少 moves。
@@ -351,8 +333,6 @@ goal:  (-1, -1, 2, 1, 0)
 每个 disk move 的 cost 都是 1，因此 BFS 第一次到达 goal 时就是 shortest solution。
 
 ---
-
-<a name="05--common-mistakes"></a>
 
 ## 05 · Common Mistakes
 

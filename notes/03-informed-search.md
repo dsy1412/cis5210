@@ -10,18 +10,18 @@ This note treats the attached course materials as source material only. It recor
 
 ### Read With These Questions
 
-1. BFS 假设 unit step cost 时合理；edge cost 不同的时候为什么要换成 UCS？[答案](#02--from-unit-cost-to-weighted-cost)
-2. UCS 的 priority 是什么？为什么它要在 goal 被 popped / selected for expansion 时才停止？[答案](#ucs-vs-bfs-goal-test-timing)
-3. `g(n)`、`h(n)`、`f(n)` 分别代表什么？[答案](#key-symbols)
-4. heuristic function 为什么只是 estimate，不是 true cost？[答案](#05--heuristic-functions)
-5. Greedy best-first search 为什么可能很快，但不保证 optimal？[答案](#greedy-properties)
-6. A* 为什么把 `g(n)` 和 `h(n)` 加起来，而不是只看其中一个？[答案](#why-a-is-less-reckless-than-greedy)
-7. admissible heuristic 的核心不等式是什么？为什么不能 overestimate？[答案](#why-overestimating-is-dangerous)
-8. 如果 `h(n)=0`，A* 退化成什么？[答案](#14--best-and-worst-admissible-heuristics)
-9. 如果 `h(n)=h*(n)`，A* 为什么几乎拥有 perfect guidance？[答案](#14--best-and-worst-admissible-heuristics)
-10. relaxed problem 为什么常常能产生 admissible heuristic？[答案](#12--relaxed-problems)
-11. Manhattan distance 为什么比 misplaced tiles 更 informative？[答案](#manhattan-distance)
-12. A* 可以用于哪些真实系统？它的 guarantee 依赖哪些前提？[答案](#16--a-applications)
+1. BFS 假设 unit step cost 时合理；edge cost 不同的时候为什么要换成 UCS？ [[#02 · From Unit Cost to Weighted Cost|答案]]
+2. UCS 的 priority 是什么？为什么它要在 goal 被 popped / selected for expansion 时才停止？ [[#UCS vs BFS Goal Test Timing|答案]]
+3. `g(n)`、`h(n)`、`f(n)` 分别代表什么？ [[#Key Symbols|答案]]
+4. heuristic function 为什么只是 estimate，不是 true cost？ [[#05 · Heuristic Functions|答案]]
+5. Greedy best-first search 为什么可能很快，但不保证 optimal？ [[#Greedy Properties|答案]]
+6. A* 为什么把 `g(n)` 和 `h(n)` 加起来，而不是只看其中一个？ [[#Why A* Is Less Reckless Than Greedy|答案]]
+7. admissible heuristic 的核心不等式是什么？为什么不能 overestimate？ [[#Why Overestimating Is Dangerous|答案]]
+8. 如果 `h(n)=0`，A* 退化成什么？ [[#14 · Best and Worst Admissible Heuristics|答案]]
+9. 如果 `h(n)=h*(n)`，A* 为什么几乎拥有 perfect guidance？ [[#14 · Best and Worst Admissible Heuristics|答案]]
+10. relaxed problem 为什么常常能产生 admissible heuristic？ [[#12 · Relaxed Problems|答案]]
+11. Manhattan distance 为什么比 misplaced tiles 更 informative？ [[#Manhattan Distance|答案]]
+12. A* 可以用于哪些真实系统？它的 guarantee 依赖哪些前提？ [[#16 · A* Applications|答案]]
 
 ### One-Minute Map
 
@@ -87,8 +87,6 @@ BFS / DFS / IDS
 -> admissible heuristic gives optimality for A* tree search
 ```
 
-<a name="key-symbols"></a>
-
 ### Key Symbols
 
 | Symbol | Meaning | 中文直觉 |
@@ -107,8 +105,6 @@ f = full estimated cost
 ```
 
 ---
-
-<a name="02--from-unit-cost-to-weighted-cost"></a>
 
 ## 02 · From Unit Cost to Weighted Cost
 
@@ -194,8 +190,6 @@ $$
 Path cost is additive.
 
 The lecture assumes positive / nonnegative costs so that cost does not decrease as a path gets longer.
-
-<a name="ucs-vs-bfs-goal-test-timing"></a>
 
 ### UCS vs BFS Goal Test Timing
 
@@ -285,8 +279,6 @@ Different choices of $f(n)$ give different algorithms:
 | A* | $f(n)=g(n)+h(n)$ | lowest estimated total cost |
 
 ---
-
-<a name="05--heuristic-functions"></a>
 
 ## 05 · Heuristic Functions
 
@@ -424,8 +416,6 @@ Path cost:
 
 So greedy is not optimal.
 
-<a name="greedy-properties"></a>
-
 ### Greedy Properties
 
 | Property | Greedy best-first search |
@@ -475,8 +465,6 @@ Implementation:
 ```text
 frontier = priority queue ordered by increasing f(n)
 ```
-
-<a name="why-a-is-less-reckless-than-greedy"></a>
 
 ### Why A* Is Less Reckless Than Greedy
 
@@ -548,8 +536,6 @@ But it cannot overestimate:
 ```text
 "I think goal is farther than it really is"
 ```
-
-<a name="why-overestimating-is-dangerous"></a>
 
 ### Why Overestimating Is Dangerous
 
@@ -733,8 +719,6 @@ h_oop(n) = 8
 
 This is admissible because each misplaced tile must move at least once.
 
-<a name="manhattan-distance"></a>
-
 ### Manhattan Distance
 
 Manhattan distance:
@@ -759,8 +743,6 @@ h_md(S) = 3 + 1 + 2 + 2 + 2 + 3 + 3 + 2 = 18
 ```
 
 ---
-
-<a name="12--relaxed-problems"></a>
 
 ## 12 · Relaxed Problems
 
@@ -844,8 +826,6 @@ Takeaway:
 
 ---
 
-<a name="14--best-and-worst-admissible-heuristics"></a>
-
 ## 14 · Best and Worst Admissible Heuristics
 
 Best admissible heuristic:
@@ -910,8 +890,6 @@ A*:
 ```
 
 ---
-
-<a name="16--a-applications"></a>
 
 ## 16 · A* Applications
 

@@ -10,16 +10,16 @@ This is a practical review note. It focuses on Python details and early AI conce
 
 ### Read With These Questions
 
-1. class、instance、attribute、method 之间是什么关系？[答案](#class-instance-attribute-method)
-2. `==` 和 `is` 分别比较什么？aliasing 为什么会让 bug 难发现？[答案](#vs-is)
-3. graph search 里为什么常用 `deque`、`heapq`、`set`、predecessor map？[答案](#06--data-structures-for-graph-search)
-4. BFS / DFS / best-first search 的 frontier 数据结构分别是什么？[答案](#frontier-bfs-vs-dfs-vs-best-first)
-5. table-driven agent 为什么理论上简单、实践上不可扩展？[答案](#table-driven-agent)
-6. reflex / model-based / goal-based / utility-based / learning agent 的区别是什么？[答案](#reflex-goal-utility-and-learning-agents)
-7. PEAS 四个字母分别设计什么？[答案](#peas)
-8. fully observable、deterministic、episodic、static、discrete、single-agent 这些维度各自问的是什么？[答案](#09--environment-properties)
-9. rationality 为什么不是 omniscience？坏结果一定说明 agent 不 rational 吗？[答案](#10--rationality-and-bad-outcomes)
-10. mortgage approval AI 的 bias 和 transparency 问题，分别来自哪里？[答案](#11--ethics-mortgage-approval-ai)
+1. class、instance、attribute、method 之间是什么关系？ [[#Class, Instance, Attribute, Method|答案]]
+2. `==` 和 `is` 分别比较什么？aliasing 为什么会让 bug 难发现？ [[#== vs is|答案]]
+3. graph search 里为什么常用 `deque`、`heapq`、`set`、predecessor map？ [[#06 · Data Structures for Graph Search|答案]]
+4. BFS / DFS / best-first search 的 frontier 数据结构分别是什么？ [[#Frontier - BFS vs DFS vs Best-First|答案]]
+5. table-driven agent 为什么理论上简单、实践上不可扩展？ [[#Table-Driven Agent|答案]]
+6. reflex / model-based / goal-based / utility-based / learning agent 的区别是什么？ [[#Reflex, Goal, Utility, and Learning Agents|答案]]
+7. PEAS 四个字母分别设计什么？ [[#PEAS|答案]]
+8. fully observable、deterministic、episodic、static、discrete、single-agent 这些维度各自问的是什么？ [[#09 · Environment Properties|答案]]
+9. rationality 为什么不是 omniscience？坏结果一定说明 agent 不 rational 吗？ [[#10 · Rationality and Bad Outcomes|答案]]
+10. mortgage approval AI 的 bias 和 transparency 问题，分别来自哪里？ [[#11 · Ethics - Mortgage Approval AI|答案]]
 
 ### One-Minute Map
 
@@ -81,8 +81,6 @@ Python mechanics
 ---
 
 ## 02 · Python Objects and Classes
-
-<a name="class-instance-attribute-method"></a>
 
 ### Class, Instance, Attribute, Method
 
@@ -175,9 +173,7 @@ Why?
 
 > `x` and `y` point to the same list object.
 
-<a name="vs-is"></a>
-
-### `==` vs `is`
+### == vs is
 
 This is a frequent Python confusion.
 
@@ -446,8 +442,6 @@ Comparison:
 
 ---
 
-<a name="06--data-structures-for-graph-search"></a>
-
 ## 06 · Data Structures for Graph Search
 
 A graph-search algorithm usually needs:
@@ -456,9 +450,7 @@ A graph-search algorithm usually needs:
 2. visited set（已访问集合）
 3. predecessor map（前驱映射）
 
-<a name="frontier-bfs-vs-dfs-vs-best-first"></a>
-
-### Frontier: BFS vs DFS vs Best-First
+### Frontier - BFS vs DFS vs Best-First
 
 | Search | Removes | Python Structure | Key Operations | Cost |
 | --- | --- | --- | --- | --- |
@@ -550,8 +542,6 @@ goal -> parent -> parent -> ... -> start
 
 ## 07 · Agent Types
 
-<a name="table-driven-agent"></a>
-
 ### Table-Driven Agent
 
 A table-driven agent stores:
@@ -585,8 +575,6 @@ Important characteristics:
 Main problem:
 
 > Table-driven agents do not scale because the table grows very quickly as percept history becomes longer.
-
-<a name="reflex-goal-utility-and-learning-agents"></a>
 
 ### Reflex, Goal, Utility, and Learning Agents
 
@@ -652,8 +640,6 @@ For example:
 
 These may be implementation choices, but they are not the main abstract design steps.
 
-<a name="peas"></a>
-
 ### PEAS
 
 PEAS means:
@@ -716,8 +702,6 @@ Step 6: Improve the design.
 > Adjust utility weights and decision logic based on failure cases.
 
 ---
-
-<a name="09--environment-properties"></a>
 
 ## 09 · Environment Properties
 
@@ -857,8 +841,6 @@ Reason:
 
 ---
 
-<a name="10--rationality-and-bad-outcomes"></a>
-
 ## 10 · Rationality and Bad Outcomes
 
 A rational agent is not the same as an omniscient agent.
@@ -895,9 +877,7 @@ Important idea:
 
 ---
 
-<a name="11--ethics-mortgage-approval-ai"></a>
-
-## 11 · Ethics: Mortgage Approval AI
+## 11 · Ethics - Mortgage Approval AI
 
 Scenario:
 

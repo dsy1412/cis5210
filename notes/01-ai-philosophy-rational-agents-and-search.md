@@ -12,18 +12,18 @@ This note keeps the lecture's main logic. It does not try to solve the philosoph
 
 复习时先不要从细节背起，先用这组问题检查自己有没有抓住主线：
 
-1. AI 的四种定义分别是什么？这门课为什么选择 **Acting Rationally** 作为主线？[答案](#core-idea)
-2. Turing Test 测试的是 “thinking” 还是 “acting humanly”？它为什么不能证明机器真的理解？[答案](#turing-test-operationalizing-the-question)
-3. Chinese Room 想反驳什么？它怎样区分 syntax（符号操作）和 semantics（意义理解）？[答案](#searles-chinese-room)
-4. ELIZA 为什么是一个好例子：看起来会对话，为什么仍不等于真正理解？[答案](#eliza-rule-based-conversation)
-5. 为什么 modern LLMs / AGI 让哲学问题重新回到 AI 讨论中？[答案](#agi-returns-to-the-conversation)
-6. 什么是 agent？sensor、actuator、percept、percept sequence 分别是什么？[答案](#agent)
-7. Agent function 和 agent program 有什么区别？为什么 table-driven agent 不可扩展？[答案](#agent-function-vs-agent-program)
-8. Rationality 为什么不等于 omniscience？为什么 rational action 仍然可能产生 bad outcome？[答案](#rationality-is-not-omniscience)
-9. Expected performance 和 actual performance 有什么区别？为什么 AI 更关心 expected performance？[答案](#expected-performance)
-10. PEAS 如何描述 task environment？给 taxi / drone 写 PEAS 时最容易混哪几项？[答案](#task-environment-and-peas)
-11. 六个 environment dimensions 是什么？为什么 self-driving car 是最难的一类环境？[答案](#environment-dimensions)
-12. 为什么课程进入 search 前要先限制在 static, fully observable, deterministic, discrete environments？[答案](#course-simplification-before-search)
+1. AI 的四种定义分别是什么？这门课为什么选择 **Acting Rationally** 作为主线？ [[#Core Idea|答案]]
+2. Turing Test 测试的是 “thinking” 还是 “acting humanly”？它为什么不能证明机器真的理解？ [[#Turing Test - Operationalizing the Question|答案]]
+3. Chinese Room 想反驳什么？它怎样区分 syntax（符号操作）和 semantics（意义理解）？ [[#Searle's Chinese Room|答案]]
+4. ELIZA 为什么是一个好例子：看起来会对话，为什么仍不等于真正理解？ [[#ELIZA - Rule-Based Conversation|答案]]
+5. 为什么 modern LLMs / AGI 让哲学问题重新回到 AI 讨论中？ [[#AGI Returns to the Conversation|答案]]
+6. 什么是 agent？sensor、actuator、percept、percept sequence 分别是什么？ [[#Agent|答案]]
+7. Agent function 和 agent program 有什么区别？为什么 table-driven agent 不可扩展？ [[#Agent Function vs Agent Program|答案]]
+8. Rationality 为什么不等于 omniscience？为什么 rational action 仍然可能产生 bad outcome？ [[#Rationality Is Not Omniscience|答案]]
+9. Expected performance 和 actual performance 有什么区别？为什么 AI 更关心 expected performance？ [[#Expected Performance|答案]]
+10. PEAS 如何描述 task environment？给 taxi / drone 写 PEAS 时最容易混哪几项？ [[#Task Environment and PEAS|答案]]
+11. 六个 environment dimensions 是什么？为什么 self-driving car 是最难的一类环境？ [[#Environment Dimensions|答案]]
+12. 为什么课程进入 search 前要先限制在 static, fully observable, deterministic, discrete environments？ [[#Course Simplification Before Search|答案]]
 
 ### One-Minute Map
 
@@ -137,16 +137,14 @@ $$
 
 ## 02 · Notes
 
-<a name="core-idea"></a>
-
 ### Core Idea
 
 AI 可以从四个角度定义：
 
-| | Human | Rational |
-| --- | --- | --- |
+|          | Human            | Rational            |
+| -------- | ---------------- | ------------------- |
 | Thinking | Thinking Humanly | Thinking Rationally |
-| Acting | Acting Humanly | Acting Rationally |
+| Acting   | Acting Humanly   | Acting Rationally   |
 
 这门课选择的主线是：
 
@@ -210,9 +208,7 @@ Descartes 的区分标准大致是：
 
 This is why language becomes such an important test case for AI.
 
-<a name="turing-test-operationalizing-the-question"></a>
-
-#### Turing Test: Operationalizing the Question
+#### Turing Test - Operationalizing the Question
 
 Turing 认为 “Can machines think?” 太难定义，所以把问题 operationalize（操作化）：
 
@@ -270,8 +266,6 @@ Turing 把这个游戏改成：
 
 这不是证明 machine has a mind（机器有心灵），而是把一个难定义的问题变成可测试的行为问题。
 
-<a name="searles-chinese-room"></a>
-
 #### Searle's Chinese Room
 
 Searle 的 Chinese Room（中文房间）挑战 Turing Test。
@@ -309,9 +303,7 @@ Searle 的结论是：
 | Strong AI（强人工智能） | 机器真的拥有 understanding, mind, cognitive states |
 | Weak AI（弱人工智能） | 机器只是 simulate thought，看起来像理解 |
 
-<a name="eliza-rule-based-conversation"></a>
-
-#### ELIZA: Rule-Based Conversation
+#### ELIZA - Rule-Based Conversation
 
 Transcript 还提到 ELIZA，一个早期 AI 系统，用规则模仿 Rogerian psychotherapy（罗杰斯式心理治疗）。
 
@@ -360,8 +352,6 @@ simulating thinking?
 然后转向更可操作的问题：
 
 > How do we build practical AI programs that work?
-
-<a name="agi-returns-to-the-conversation"></a>
 
 #### AGI Returns to the Conversation
 
@@ -554,8 +544,6 @@ Important distinction:
 
 > SciFi often imagines one unified general intelligence; real AI often first succeeds by decomposing that dream into narrow benchmarked tasks.
 
-<a name="agent"></a>
-
 ### Agent
 
 Definition:
@@ -618,8 +606,6 @@ $$
 Meaning:
 
 > Agent function 是“如果看到这段历史，就应该做什么”的抽象描述。
-
-<a name="agent-function-vs-agent-program"></a>
 
 ### Agent Function vs Agent Program
 
@@ -698,8 +684,6 @@ Better reward:
 
 This connects later to reward design（奖励设计）and specification gaming（指标投机）.
 
-<a name="rationality-is-not-omniscience"></a>
-
 ### Rationality Is Not Omniscience
 
 Omniscience（全知）means knowing the true outcome of actions.
@@ -754,8 +738,6 @@ chess / Go: cannot exhaustively search all outcomes
 real world: uncertainty + computation limits
 ```
 
-<a name="expected-performance"></a>
-
 ### Expected Performance
 
 The stronger definition is:
@@ -798,8 +780,6 @@ Later connection:
 - minimax: useful when the opponent is rational and trying to maximize its own score.
 - expectimax: useful when outcomes include chance, such as dice rolls or card draws.
 - expected maximum utility: later formal decision principle.
-
-<a name="task-environment-and-peas"></a>
 
 ### Task Environment and PEAS
 
@@ -859,8 +839,6 @@ Task
 -> architecture
 -> actions
 ```
-
-<a name="environment-dimensions"></a>
 
 ### Environment Dimensions
 
@@ -968,8 +946,6 @@ The hardest environments often combine:
 - unknown consequences.
 
 Self-driving is hard because the agent cannot fully see the world, the world keeps changing, other people have goals, and action outcomes are uncertain.
-
-<a name="course-simplification-before-search"></a>
 
 ### Course Simplification Before Search
 

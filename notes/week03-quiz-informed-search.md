@@ -23,16 +23,16 @@ heuristic h(n)
 
 ### Read With These Questions
 
-1. heuristic function `h(n)` 估计的是哪一段 cost？[答案](#01--heuristic-function)
-2. `g(n)` 和 `h(n)` 为什么不能混？`f(n)` 是怎么来的？[答案](#04--gn-is-actual-cost-so-far)
-3. Greedy best-first search 的 `f(n)` 是什么？它为什么可能 not optimal？[答案](#02--greedy-best-first-search)
-4. A* 的 `f(n)` 是什么？它为什么比 greedy 更谨慎？[答案](#03--a-search)
-5. admissible heuristic 的不等式是什么？[答案](#06--admissible-heuristic)
-6. consistent heuristic 和 admissible heuristic 的关系是什么？[答案](#08--consistency-vs-admissibility)
-7. dominant heuristic 为什么通常能减少 node expansions？[答案](#10--dominant-heuristic)
-8. relaxed problem 为什么能给出 lower bound？[答案](#11--relaxed-problem)
-9. Manhattan distance 在 8-puzzle 中怎么算？为什么比 misplaced tiles 更强？[答案](#12--manhattan-distance-for-the-8-puzzle)
-10. 写 A* 代码时，priority queue 里存什么？visited / best-known cost 怎么处理？[答案](#13--practical-a-implementation-idea)
+1. heuristic function `h(n)` 估计的是哪一段 cost？ [[#01 · Heuristic Function|答案]]
+2. `g(n)` 和 `h(n)` 为什么不能混？`f(n)` 是怎么来的？ [[#04 · g(n) Is Actual Cost So Far|答案]]
+3. Greedy best-first search 的 `f(n)` 是什么？它为什么可能 not optimal？ [[#02 · Greedy Best-First Search|答案]]
+4. A* 的 `f(n)` 是什么？它为什么比 greedy 更谨慎？ [[#03 · A* Search|答案]]
+5. admissible heuristic 的不等式是什么？ [[#06 · Admissible Heuristic|答案]]
+6. consistent heuristic 和 admissible heuristic 的关系是什么？ [[#08 · Consistency vs Admissibility|答案]]
+7. dominant heuristic 为什么通常能减少 node expansions？ [[#10 · Dominant Heuristic|答案]]
+8. relaxed problem 为什么能给出 lower bound？ [[#11 · Relaxed Problem|答案]]
+9. Manhattan distance 在 8-puzzle 中怎么算？为什么比 misplaced tiles 更强？ [[#12 · Manhattan Distance for the 8-Puzzle|答案]]
+10. 写 A* 代码时，priority queue 里存什么？visited / best-known cost 怎么处理？ [[#13 · Practical A* Implementation Idea|答案]]
 
 ### One-Minute Map
 
@@ -70,8 +70,6 @@ estimate remaining cost
 
 ---
 
-<a name="01--heuristic-function"></a>
-
 ## 01 · Heuristic Function
 
 A heuristic function estimates the remaining cost from a state / node to a goal.
@@ -106,8 +104,6 @@ heuristic = ranking signal
 
 ---
 
-<a name="02--greedy-best-first-search"></a>
-
 ## 02 · Greedy Best-First Search
 
 Greedy best-first search chooses the node with the smallest heuristic value.
@@ -140,8 +136,6 @@ Node B: already spent cost 2, h=5
 Greedy prefers A because `h(A) < h(B)`，但 A 的 total path 可能更差。
 
 ---
-
-<a name="03--a-search"></a>
 
 ## 03 · A* Search
 
@@ -189,9 +183,7 @@ A* expands A next because it has the smallest $f(n)$.
 
 ---
 
-<a name="04--gn-is-actual-cost-so-far"></a>
-
-## 04 · `g(n)` Is Actual Cost So Far
+## 04 · g(n) Is Actual Cost So Far
 
 $g(n)$ is the actual path cost from the start node to node $n$.
 
@@ -251,8 +243,6 @@ past cost + future estimate
 > Greedy 看“前面还剩多少”；A* 同时看“已经花了多少”和“估计还剩多少”。
 
 ---
-
-<a name="06--admissible-heuristic"></a>
 
 ## 06 · Admissible Heuristic
 
@@ -316,8 +306,6 @@ This is like saying:
 
 ---
 
-<a name="08--consistency-vs-admissibility"></a>
-
 ## 08 · Consistency vs Admissibility
 
 Key relationship:
@@ -373,8 +361,6 @@ This is why quizzes often ask whether the setting is tree search or graph search
 
 ---
 
-<a name="10--dominant-heuristic"></a>
-
 ## 10 · Dominant Heuristic
 
 Suppose $h_1$ and $h_2$ are both admissible.
@@ -420,8 +406,6 @@ Common mistake:
 
 ---
 
-<a name="11--relaxed-problem"></a>
-
 ## 11 · Relaxed Problem
 
 A relaxed problem is a simpler version of the original problem where one or more constraints are removed.
@@ -451,8 +435,6 @@ relaxed problem is easier
 > 放宽规则后，解题不会更难，所以 relaxed solution cost 是真实 cost 的下界。
 
 ---
-
-<a name="12--manhattan-distance-for-the-8-puzzle"></a>
 
 ## 12 · Manhattan Distance for the 8-Puzzle
 
@@ -518,8 +500,6 @@ So the Manhattan heuristic for this state is:
 ```
 
 ---
-
-<a name="13--practical-a-implementation-idea"></a>
 
 ## 13 · Practical A* Implementation Idea
 
