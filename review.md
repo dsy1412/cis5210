@@ -21,6 +21,12 @@ Notes record what I understand; review records what I do not understand.
 - Informed search: distinguish Greedy best-first search from A* using $g(n)$, $h(n)$, and $f(n)$.
 - Uniform Cost Search: explain why UCS uses $g(n)$ and why the goal test happens when a node is popped.
 - Heuristic guarantees: explain admissible, consistent, and why consistent implies admissible.
+- A* implementation: explain why `best_cost` is safer than a plain visited set for weighted-cost search.
+- HW3 heuristics: justify Manhattan distance, Euclidean distance, and the distinct-disk lower bound as admissible.
+- Adversarial search: explain why games need strategies rather than fixed action sequences.
+- Minimax: compute backed-up values through alternating MAX and MIN layers.
+- Alpha-beta pruning: explain why pruning does not change the minimax decision.
+- Expectimax: distinguish chance nodes from MIN nodes and compute expected values.
 - PEAS: write Performance, Environment, Actuators, and Sensors for a new task without mixing them.
 - Bounded rationality: explain why rational agents cannot require omniscience or unlimited computation.
 
@@ -31,6 +37,12 @@ Notes record what I understand; review records what I do not understand.
 - Relaxed problems: explain why removing constraints gives an admissible heuristic.
 - 8-puzzle Manhattan distance: compute tile row/column distances without counting the blank.
 - A* optimality proof sketch: explain why an ancestor of the optimal goal exits the frontier before a suboptimal goal.
+- Tile Puzzle: remember that move direction refers to the empty tile.
+- Grid Navigation: avoid using Manhattan distance when diagonal moves are allowed.
+- Distinct Disks: do not add overlapping lower bounds if the same move can satisfy both.
+- Evaluation functions: distinguish terminal utility from nonterminal position evaluation.
+- Alpha and beta: explain `alpha` as MAX's lower bound and `beta` as MIN's upper bound.
+- Expected utility: compute probability-weighted utilities rather than choosing best possible outcome.
 - LLMs and planning: explain why a language model can answer a famous shortest-path example without reliably computing shortest paths.
 - Adversarial games: explain why an optimal move depends on assumptions about the opponent.
 - Constraint satisfaction: distinguish search over paths from search over assignments.
@@ -175,6 +187,90 @@ Missing:
 Question:
 
 Compute Manhattan distance for an 8-puzzle state and explain why the blank is ignored.
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+How do games differ from ordinary single-agent search problems?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+What is the difference between a utility function and an evaluation function in game search?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+Compute the minimax backed-up value for a two-ply tree with alternating MAX and MIN nodes.
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+Why does alpha-beta pruning return the same answer as minimax?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+What do `alpha` and `beta` mean in alpha-beta pruning?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+When should expectimax be used instead of minimax?
+
+My answer:
+
+
+Verdict:
+
+
+Missing:
+
+Question:
+
+How do you compute expected utility at a chance node?
 
 My answer:
 

@@ -50,7 +50,7 @@ Add topics only after real course material is available.
 | AI ethics basics | · | — | — | · |
 | Uninformed search | · | · | — | · |
 | Informed search | · | · | — | · |
-| Adversarial search and games | — | — | — | — |
+| Adversarial search and games | · | · | — | · |
 | Constraint satisfaction problems | — | — | — | — |
 | Logical agents | — | — | — | — |
 
@@ -59,11 +59,13 @@ Add topics only after real course material is available.
 - [01 · AI Philosophy, Rational Agents, and Search](notes/01-ai-philosophy-rational-agents-and-search.md)
 - [02 · Search Problems](notes/02-search-problems.md)
 - [03 · Informed Search](notes/03-informed-search.md)
+- [04 · Adversarial Search and Games](notes/04-adversarial-search-and-games.md)
 - [Week 02 Quiz · Uninformed Search](notes/week02-quiz-uninformed-search.md)
 - [Week 03 Quiz · Informed Search](notes/week03-quiz-informed-search.md)
 - [HW01 · Python, Agents, and Search Review](notes/hw01-python-agents-and-search-review.md)
 - [HW01 · Python Skills](notes/hw01-python-skills.md)
 - [HW02 · Uninformed Search](notes/hw02-uninformed-search.md)
+- [HW03 · Informed Search](notes/hw03-informed-search.md)
 
 ## Labs
 
