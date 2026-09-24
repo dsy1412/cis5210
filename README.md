@@ -66,6 +66,7 @@ Add topics only after real course material is available.
 - [HW01 · Python Skills](notes/hw01-python-skills.md)
 - [HW02 · Uninformed Search](notes/hw02-uninformed-search.md)
 - [HW03 · Informed Search](notes/hw03-informed-search.md)
+- [HW04 · Adversarial Games](notes/hw04-adversarial-games.md)
 
 ## Labs
 
